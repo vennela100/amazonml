@@ -1,0 +1,172 @@
+[
+  {
+    "path": "student_resource/",
+    "bytes": 0,
+    "crc32": "00000000"
+  },
+  {
+    "path": "__MACOSX/._student_resource",
+    "bytes": 254,
+    "crc32": "aeb1d1b3"
+  },
+  {
+    "path": "student_resource/Documentation_template.md",
+    "bytes": 2175,
+    "crc32": "e47df0d9"
+  },
+  {
+    "path": "__MACOSX/student_resource/._Documentation_template.md",
+    "bytes": 354,
+    "crc32": "4040eaca"
+  },
+  {
+    "path": "student_resource/.DS_Store",
+    "bytes": 6148,
+    "crc32": "c38c57cf"
+  },
+  {
+    "path": "__MACOSX/student_resource/._.DS_Store",
+    "bytes": 211,
+    "crc32": "8cbc4666"
+  },
+  {
+    "path": "student_resource/dataset/",
+    "bytes": 0,
+    "crc32": "00000000"
+  },
+  {
+    "path": "__MACOSX/student_resource/._dataset",
+    "bytes": 254,
+    "crc32": "aeb1d1b3"
+  },
+  {
+    "path": "student_resource/utils/",
+    "bytes": 0,
+    "crc32": "00000000"
+  },
+  {
+    "path": "__MACOSX/student_resource/._utils",
+    "bytes": 254,
+    "crc32": "aeb1d1b3"
+  },
+  {
+    "path": "student_resource/README.md",
+    "bytes": 14130,
+    "crc32": "a05692db"
+  },
+  {
+    "path": "__MACOSX/student_resource/._README.md",
+    "bytes": 354,
+    "crc32": "4040eaca"
+  },
+  {
+    "path": "student_resource/dataset/.DS_Store",
+    "bytes": 6148,
+    "crc32": "734221f4"
+  },
+  {
+    "path": "__MACOSX/student_resource/dataset/._.DS_Store",
+    "bytes": 211,
+    "crc32": "8cbc4666"
+  },
+  {
+    "path": "student_resource/dataset/test/",
+    "bytes": 0,
+    "crc32": "00000000"
+  },
+  {
+    "path": "__MACOSX/student_resource/dataset/._test",
+    "bytes": 254,
+    "crc32": "aeb1d1b3"
+  },
+  {
+    "path": "student_resource/dataset/train/",
+    "bytes": 0,
+    "crc32": "00000000"
+  },
+  {
+    "path": "__MACOSX/student_resource/dataset/._train",
+    "bytes": 254,
+    "crc32": "aeb1d1b3"
+  },
+  {
+    "path": "student_resource/utils/validate_submission.py",
+    "bytes": 13687,
+    "crc32": "2ed21f44"
+  },
+  {
+    "path": "__MACOSX/student_resource/utils/._validate_submission.py",
+    "bytes": 354,
+    "crc32": "4040eaca"
+  },
+  {
+    "path": "student_resource/dataset/test/test_source2.tsv",
+    "bytes": 509456422,
+    "crc32": "6d4ab3a9"
+  },
+  {
+    "path": "__MACOSX/student_resource/dataset/test/._test_source2.tsv",
+    "bytes": 254,
+    "crc32": "aeb1d1b3"
+  },
+  {
+    "path": "student_resource/dataset/test/test_source3.tsv",
+    "bytes": 506002772,
+    "crc32": "18818d74"
+  },
+  {
+    "path": "__MACOSX/student_resource/dataset/test/._test_source3.tsv",
+    "bytes": 254,
+    "crc32": "aeb1d1b3"
+  },
+  {
+    "path": "student_resource/dataset/test/test_source1.tsv",
+    "bytes": 175022086,
+    "crc32": "e516809c"
+  },
+  {
+    "path": "__MACOSX/student_resource/dataset/test/._test_source1.tsv",
+    "bytes": 254,
+    "crc32": "aeb1d1b3"
+  },
+  {
+    "path": "student_resource/dataset/train/train_ground_truth.tsv",
+    "bytes": 127015583,
+    "crc32": "4ba4dc63"
+  },
+  {
+    "path": "__MACOSX/student_resource/dataset/train/._train_ground_truth.tsv",
+    "bytes": 254,
+    "crc32": "aeb1d1b3"
+  },
+  {
+    "path": "student_resource/dataset/train/train_source2.tsv",
+    "bytes": 489301488,
+    "crc32": "8cf20498"
+  },
+  {
+    "path": "__MACOSX/student_resource/dataset/train/._train_source2.tsv",
+    "bytes": 254,
+    "crc32": "aeb1d1b3"
+  },
+  {
+    "path": "student_resource/dataset/train/train_source3.tsv",
+    "bytes": 503705637,
+    "crc32": "581539f4"
+  },
+  {
+    "path": "__MACOSX/student_resource/dataset/train/._train_source3.tsv",
+    "bytes": 254,
+    "crc32": "aeb1d1b3"
+  },
+  {
+    "path": "student_resource/dataset/train/train_source1.tsv",
+    "bytes": 210069713,
+    "crc32": "ed0bb7c8"
+  },
+  {
+    "path": "__MACOSX/student_resource/dataset/train/._train_source1.tsv",
+    "bytes": 254,
+    "crc32": "aeb1d1b3"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "threshold": 0.85,
+  "n_entities": 1000,
+  "n_predicted_pairs": 2875,
+  "n_candidate_pairs": 301507,
+  "scored": {
+    "entities": 1000,
+    "macro_f05": 0.8590987293540687,
+    "true_singletons": 49,
+    "singleton_fraction": 0.049,
+    "false_singleton_count": 11,
+    "false_singleton_rate": 0.22448979591836735,
+    "missed_non_singleton_rate": 0.035751840168243953,
+    "nonempty_predictions": 928,
+    "exact_set_accuracy": 0.442
+  },
+  "elapsed_seconds": 3.8910000000032596
+}

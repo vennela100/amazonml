@@ -1,0 +1,48 @@
+{
+  "retrieval": {
+    "anchors": 8,
+    "postings_per_anchor": 96,
+    "shortlist": 96,
+    "rare_max_df": 100,
+    "component_max_df": 5000,
+    "budgets": {
+      "name": 50,
+      "address": 50,
+      "combined": 50,
+      "rare": 50,
+      "components": 50
+    }
+  },
+  "mode": {
+    "type": "grouped"
+  },
+  "role": "train",
+  "limit": 3000,
+  "implementation_sha256": {
+    "stage3.py": "43cc7d9a57245e4a553198f63c6404f4114e800547d21457ff4219026b6231bd",
+    "blocking_index.py": "89507e13c3f78fdf454d4f2070015ff05c1b4a5afa0f58d8ea61a7a16afe26b2",
+    "blocking_retrieval.py": "e65cb9ec9980e9a2b0763aaf7cc37e8006088336480202cb9c90c3b68cea68c1"
+  },
+  "indexes": {
+    "1": {
+      "path": "C:\\Users\\alamu\\OneDrive\\Documents\\amazonml\\artifacts\\stage3\\indexes\\train_source1.sqlite",
+      "bytes": 1136263168,
+      "mtime_ns": 1790347133377832100
+    },
+    "2": {
+      "path": "C:\\Users\\alamu\\OneDrive\\Documents\\amazonml\\artifacts\\stage3\\indexes\\train_source2.sqlite",
+      "bytes": 2194374656,
+      "mtime_ns": 1790348099563211400
+    },
+    "3": {
+      "path": "C:\\Users\\alamu\\OneDrive\\Documents\\amazonml\\artifacts\\stage3\\indexes\\train_source3.sqlite",
+      "bytes": 2292011008,
+      "mtime_ns": 1790349788045171000
+    }
+  },
+  "idf": {
+    "path": "C:\\Users\\alamu\\OneDrive\\Documents\\amazonml\\artifacts\\stage3\\indexes\\idf_grouped.sqlite",
+    "bytes": 557346816,
+    "mtime_ns": 1790350052373223200
+  }
+}

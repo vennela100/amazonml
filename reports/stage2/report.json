@@ -1,0 +1,1382 @@
+{
+  "stage": 2,
+  "status": "PASS",
+  "normalization_version": "1.0.0",
+  "total_rows": 24229173,
+  "schema": [
+    "entity_id",
+    "business_name",
+    "business_address",
+    "country",
+    "name_clean",
+    "name_normalized",
+    "address_normalized",
+    "address_numbers",
+    "house_numbers",
+    "house_number_candidates",
+    "house_number_source",
+    "street_numbers",
+    "postal_codes",
+    "postal_candidates",
+    "postal_code_source",
+    "name_missing",
+    "address_missing",
+    "name_null_like",
+    "address_null_like",
+    "name_normalized_empty",
+    "address_normalized_empty",
+    "house_number_missing",
+    "house_number_ambiguous",
+    "postal_code_missing",
+    "postal_code_ambiguous"
+  ],
+  "workers": 4,
+  "files": {
+    "test_source2.tsv": {
+      "rows": 4887273,
+      "country_counts": {
+        "India": 2312565,
+        "France": 703378,
+        "US": 1871330
+      },
+      "flags": {
+        "name_missing": 0,
+        "address_missing": 129408,
+        "name_null_like": 49,
+        "address_null_like": 0,
+        "name_normalized_empty": 0,
+        "address_normalized_empty": 129408,
+        "house_number_missing": 1522239,
+        "house_number_ambiguous": 67360,
+        "postal_code_missing": 4887088,
+        "postal_code_ambiguous": 81781
+      },
+      "changes": {
+        "name_changed": 4327268,
+        "address_changed": 4757865,
+        "legal_suffix_changed_clean_view": 823043
+      },
+      "house_number_sources": {
+        "none": 1522239,
+        "leading_number_heuristic": 2842770,
+        "explicit_premise_label": 522264
+      },
+      "postal_code_sources": {
+        "none": 4887088,
+        "trailing_numeric_heuristic": 177,
+        "explicit_postal_label": 8
+      },
+      "per_country": {
+        "India": {
+          "rows": 2312565,
+          "name_missing": 0,
+          "address_missing": 52764,
+          "name_null_like": 0,
+          "address_null_like": 0,
+          "name_normalized_empty": 0,
+          "address_normalized_empty": 52764,
+          "house_number_missing": 912888,
+          "house_number_ambiguous": 27956,
+          "postal_code_missing": 2312464,
+          "postal_code_ambiguous": 9851
+        },
+        "France": {
+          "rows": 703378,
+          "name_missing": 0,
+          "address_missing": 21537,
+          "name_null_like": 45,
+          "address_null_like": 0,
+          "name_normalized_empty": 0,
+          "address_normalized_empty": 21537,
+          "house_number_missing": 174171,
+          "house_number_ambiguous": 738,
+          "postal_code_missing": 703340,
+          "postal_code_ambiguous": 2583
+        },
+        "US": {
+          "rows": 1871330,
+          "name_missing": 0,
+          "address_missing": 55107,
+          "name_null_like": 4,
+          "address_null_like": 0,
+          "name_normalized_empty": 0,
+          "address_normalized_empty": 55107,
+          "house_number_missing": 435180,
+          "house_number_ambiguous": 38666,
+          "postal_code_missing": 1871284,
+          "postal_code_ambiguous": 69347
+        }
+      },
+      "examples": {
+        "postal_code_ambiguous": [
+          {
+            "entity_id": "S2-910351373",
+            "business_name": "PVT. INDUSTRIES PMB LEASING LIMITED",
+            "business_address": "SURAT, OFFICE NO. 03038, TRADE HOUSE, NEAR RUSHABH PETROL PUMP, RING ROAD, Gujarat, SURAT",
+            "country": "India",
+            "name_normalized": "pvt industries pmb leasing limited",
+            "house_numbers": [],
+            "house_number_candidates": [],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "03038"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S2-560710588",
+            "business_name": "Schmidt Third Inc",
+            "business_address": "KENNT, WA, 26443 161TH PL",
+            "country": "US",
+            "name_normalized": "schmidt third incorporated",
+            "house_numbers": [],
+            "house_number_candidates": [],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "26443"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S2-750187901",
+            "business_name": "FOUNDRY HARBOR CO",
+            "business_address": "14489 SAINT PLACE, MORRISON CDP, CO",
+            "country": "US",
+            "name_normalized": "foundry harbor company",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "14489"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "14489"
+            ],
+            "postal_code_source": ""
+          }
+        ],
+        "house_number_ambiguous": [
+          {
+            "entity_id": "S2-750187901",
+            "business_name": "FOUNDRY HARBOR CO",
+            "business_address": "14489 SAINT PLACE, MORRISON CDP, CO",
+            "country": "US",
+            "name_normalized": "foundry harbor company",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "14489"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "14489"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S2-641777383",
+            "business_name": "Inc Holy Ministries",
+            "business_address": "41056 VILLAGE 41, CITY OF CAMARILLO, CA",
+            "country": "US",
+            "name_normalized": "inc holy ministries",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "41056"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "41056"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S2-747996032",
+            "business_name": "Thrasher Metr0politan Beverage",
+            "business_address": "15380  TNT PLACE, FAYETTEVILLE, AR",
+            "country": "US",
+            "name_normalized": "thrasher metr0politan beverage",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "15380"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "15380"
+            ],
+            "postal_code_source": ""
+          }
+        ],
+        "name_null_like": [
+          {
+            "entity_id": "S2-368256770",
+            "business_name": "NA",
+            "business_address": "7 ALLÉE DES SAUGES GRAND PIQUEY, Lège-Cap-Ferret, Gironde",
+            "country": "France",
+            "name_normalized": "na",
+            "house_numbers": [
+              "7"
+            ],
+            "house_number_candidates": [
+              "7"
+            ],
+            "house_number_source": "leading_number_heuristic",
+            "postal_codes": [],
+            "postal_candidates": [],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S2-940145557",
+            "business_name": "NA",
+            "business_address": "# 9 R. DE SAVENAY, Nantes, Pays de la Loire",
+            "country": "France",
+            "name_normalized": "na",
+            "house_numbers": [
+              "9"
+            ],
+            "house_number_candidates": [
+              "9"
+            ],
+            "house_number_source": "leading_number_heuristic",
+            "postal_codes": [],
+            "postal_candidates": [],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S2-16141727",
+            "business_name": "NA",
+            "business_address": "RUE DU FOUR A CHAUX, Lille",
+            "country": "France",
+            "name_normalized": "na",
+            "house_numbers": [],
+            "house_number_candidates": [],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [],
+            "postal_code_source": ""
+          }
+        ]
+      },
+      "input_fingerprint": {
+        "sha256": "79d906c7497af2ace70aa277f6e334a652094909de99bd6c57b53420b6a7b2dd",
+        "crc32": "6d4ab3a9",
+        "bytes": 509456422
+      },
+      "output_path": "C:\\Users\\alamu\\OneDrive\\Documents\\amazonml\\artifacts\\stage2\\test\\test_source2.tsv",
+      "output_bytes": 1472643608,
+      "validation": {
+        "rows": 4887273,
+        "raw_sha256": "4e6186d77877e4ea8cbf43223671fac173b752907dc994c1c05c4daf62b542e9",
+        "exact_raw_roundtrip": true,
+        "all_flag_values_valid": true
+      },
+      "digit_preservation_checked_rows": 4887273,
+      "elapsed_seconds": 1840.936999999998
+    },
+    "train_source2.tsv": {
+      "rows": 5034616,
+      "country_counts": {
+        "India": 2017799,
+        "US": 3016817
+      },
+      "flags": {
+        "name_missing": 0,
+        "address_missing": 168967,
+        "name_null_like": 6,
+        "address_null_like": 0,
+        "name_normalized_empty": 0,
+        "address_normalized_empty": 168967,
+        "house_number_missing": 1588128,
+        "house_number_ambiguous": 84813,
+        "postal_code_missing": 5034438,
+        "postal_code_ambiguous": 118399
+      },
+      "changes": {
+        "name_changed": 4541289,
+        "address_changed": 4865649,
+        "legal_suffix_changed_clean_view": 947372
+      },
+      "house_number_sources": {
+        "none": 1588128,
+        "leading_number_heuristic": 3000574,
+        "explicit_premise_label": 445914
+      },
+      "postal_code_sources": {
+        "none": 5034438,
+        "trailing_numeric_heuristic": 175,
+        "explicit_postal_label": 3
+      },
+      "per_country": {
+        "India": {
+          "rows": 2017799,
+          "name_missing": 0,
+          "address_missing": 57846,
+          "name_null_like": 0,
+          "address_null_like": 0,
+          "name_normalized_empty": 0,
+          "address_normalized_empty": 57846,
+          "house_number_missing": 834256,
+          "house_number_ambiguous": 23813,
+          "postal_code_missing": 2017695,
+          "postal_code_ambiguous": 8782
+        },
+        "US": {
+          "rows": 3016817,
+          "name_missing": 0,
+          "address_missing": 111121,
+          "name_null_like": 6,
+          "address_null_like": 0,
+          "name_normalized_empty": 0,
+          "address_normalized_empty": 111121,
+          "house_number_missing": 753872,
+          "house_number_ambiguous": 61000,
+          "postal_code_missing": 3016743,
+          "postal_code_ambiguous": 109617
+        }
+      },
+      "examples": {
+        "postal_code_ambiguous": [
+          {
+            "entity_id": "S2-982496654",
+            "business_name": "THE SPICEWOOD-HOMES",
+            "business_address": "22120 1/2 COYOTE CAVE TRL, null, SPICEWOOD, TX",
+            "country": "US",
+            "name_normalized": "the spicewood homes",
+            "house_numbers": [
+              "22120 1/2"
+            ],
+            "house_number_candidates": [
+              "22120 1/2"
+            ],
+            "house_number_source": "leading_number_heuristic",
+            "postal_codes": [],
+            "postal_candidates": [
+              "22120"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S2-879392749",
+            "business_name": "Direct Douglas Co",
+            "business_address": "11129 NATIONAL PIKE, GRANTVILLE, MD",
+            "country": "US",
+            "name_normalized": "direct douglas company",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "11129"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "11129"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S2-630651352",
+            "business_name": "Physical Therapy Care Inc.",
+            "business_address": "OH, 12313 REXFORD AVE, CLEVELAND",
+            "country": "US",
+            "name_normalized": "physical therapy care incorporated",
+            "house_numbers": [],
+            "house_number_candidates": [],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "12313"
+            ],
+            "postal_code_source": ""
+          }
+        ],
+        "house_number_ambiguous": [
+          {
+            "entity_id": "S2-735885703",
+            "business_name": "जैन वेंचर्स प्राइवेट लिमिटेड",
+            "business_address": "DOOR NO 149 SHOP F-1, FIRST FLOOR, PLOT NO. 4, SEC-12, PKT -5, MANISH METRO PLAZA-IV, D, WARKA, WEST DELHI, DELHI, दिल्ली",
+            "country": "India",
+            "name_normalized": "जैन वेंचर्स प्राइवेट लिमिटेड",
+            "house_numbers": [
+              "149",
+              "4"
+            ],
+            "house_number_candidates": [
+              "149",
+              "4"
+            ],
+            "house_number_source": "explicit_premise_label",
+            "postal_codes": [],
+            "postal_candidates": [],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S2-879392749",
+            "business_name": "Direct Douglas Co",
+            "business_address": "11129 NATIONAL PIKE, GRANTVILLE, MD",
+            "country": "US",
+            "name_normalized": "direct douglas company",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "11129"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "11129"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S2-430379962",
+            "business_name": "Summit  Initiative II Inc",
+            "business_address": "11641 BOX ELDER WAY, VANCE, AL",
+            "country": "US",
+            "name_normalized": "summit initiative ii incorporated",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "11641"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "11641"
+            ],
+            "postal_code_source": ""
+          }
+        ],
+        "name_null_like": [
+          {
+            "entity_id": "S2-876292278",
+            "business_name": "NAN",
+            "business_address": "1305 3610, SPANISH FORK, UT",
+            "country": "US",
+            "name_normalized": "nan",
+            "house_numbers": [
+              "1305"
+            ],
+            "house_number_candidates": [
+              "1305"
+            ],
+            "house_number_source": "leading_number_heuristic",
+            "postal_codes": [],
+            "postal_candidates": [],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S2-982925237",
+            "business_name": "NA",
+            "business_address": "11 OX YOKE CIRCLE, EAST HAMPTON, CT",
+            "country": "US",
+            "name_normalized": "na",
+            "house_numbers": [
+              "11"
+            ],
+            "house_number_candidates": [
+              "11"
+            ],
+            "house_number_source": "leading_number_heuristic",
+            "postal_codes": [],
+            "postal_candidates": [],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S2-776053769",
+            "business_name": "Na",
+            "business_address": "WEBB CITY, 114 MSIN ST, MO",
+            "country": "US",
+            "name_normalized": "na",
+            "house_numbers": [],
+            "house_number_candidates": [],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [],
+            "postal_code_source": ""
+          }
+        ]
+      },
+      "input_fingerprint": {
+        "sha256": "6336c1a055eec79cf8a6d99fdc8d32a2e4d9dc2662e00963cb35d66b89ed09ed",
+        "crc32": "8cf20498",
+        "bytes": 489301488
+      },
+      "output_path": "C:\\Users\\alamu\\OneDrive\\Documents\\amazonml\\artifacts\\stage2\\train\\train_source2.tsv",
+      "output_bytes": 1444170233,
+      "validation": {
+        "rows": 5034616,
+        "raw_sha256": "f6f674cb0731dbd7a9686d5a13a7b9faf057531cc6b042e557ebf0e025ef4905",
+        "exact_raw_roundtrip": true,
+        "all_flag_values_valid": true
+      },
+      "digit_preservation_checked_rows": 5034616,
+      "elapsed_seconds": 1845.9530000000013
+    },
+    "test_source3.tsv": {
+      "rows": 5082316,
+      "country_counts": {
+        "India": 2405000,
+        "France": 731615,
+        "US": 1945701
+      },
+      "flags": {
+        "name_missing": 0,
+        "address_missing": 136098,
+        "name_null_like": 61,
+        "address_null_like": 0,
+        "name_normalized_empty": 0,
+        "address_normalized_empty": 136098,
+        "house_number_missing": 1642937,
+        "house_number_ambiguous": 64231,
+        "postal_code_missing": 5081913,
+        "postal_code_ambiguous": 86230
+      },
+      "changes": {
+        "name_changed": 4726735,
+        "address_changed": 4946217,
+        "legal_suffix_changed_clean_view": 857236
+      },
+      "house_number_sources": {
+        "leading_number_heuristic": 2932918,
+        "explicit_premise_label": 506461,
+        "none": 1642937
+      },
+      "postal_code_sources": {
+        "none": 5081913,
+        "trailing_numeric_heuristic": 397,
+        "explicit_postal_label": 6
+      },
+      "per_country": {
+        "India": {
+          "rows": 2405000,
+          "name_missing": 0,
+          "address_missing": 59240,
+          "name_null_like": 11,
+          "address_null_like": 0,
+          "name_normalized_empty": 0,
+          "address_normalized_empty": 59240,
+          "house_number_missing": 1017453,
+          "house_number_ambiguous": 23401,
+          "postal_code_missing": 2404712,
+          "postal_code_ambiguous": 9806
+        },
+        "France": {
+          "rows": 731615,
+          "name_missing": 0,
+          "address_missing": 21541,
+          "name_null_like": 48,
+          "address_null_like": 0,
+          "name_normalized_empty": 0,
+          "address_normalized_empty": 21541,
+          "house_number_missing": 178347,
+          "house_number_ambiguous": 732,
+          "postal_code_missing": 731579,
+          "postal_code_ambiguous": 2780
+        },
+        "US": {
+          "rows": 1945701,
+          "name_missing": 0,
+          "address_missing": 55317,
+          "name_null_like": 2,
+          "address_null_like": 0,
+          "name_normalized_empty": 0,
+          "address_normalized_empty": 55317,
+          "house_number_missing": 447137,
+          "house_number_ambiguous": 40098,
+          "postal_code_missing": 1945622,
+          "postal_code_ambiguous": 73644
+        }
+      },
+      "examples": {
+        "house_number_ambiguous": [
+          {
+            "entity_id": "S3-125349995",
+            "business_name": "Ss First Infotech LLP",
+            "business_address": "H No 1-62/K/49, Plot No 36, Floor 3 K2, Business Park, Rd Number 10, Kakatiya Hills, Guttala, Begumpet, Shaikpet, Hyderabad, TG",
+            "country": "India",
+            "name_normalized": "ss first infotech llp",
+            "house_numbers": [
+              "1-62",
+              "36"
+            ],
+            "house_number_candidates": [
+              "1-62",
+              "36"
+            ],
+            "house_number_source": "explicit_premise_label",
+            "postal_codes": [],
+            "postal_candidates": [],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S3-191842349",
+            "business_name": "Big Exports Public Limited",
+            "business_address": "Plot 21., Door 6A Ags Colony, 1St Main Road, Velachery, Chennai, தமிழ்நாடு",
+            "country": "India",
+            "name_normalized": "big exports public limited",
+            "house_numbers": [
+              "21",
+              "6a"
+            ],
+            "house_number_candidates": [
+              "21",
+              "6a"
+            ],
+            "house_number_source": "explicit_premise_label",
+            "postal_codes": [],
+            "postal_candidates": [],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S3-528485292",
+            "business_name": "Hinson of South Bend West Partners",
+            "business_address": "25679 23, South Bend, Indiana",
+            "country": "US",
+            "name_normalized": "hinson of south bend west partners",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "25679"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "25679"
+            ],
+            "postal_code_source": ""
+          }
+        ],
+        "postal_code_ambiguous": [
+          {
+            "entity_id": "S3-528485292",
+            "business_name": "Hinson of South Bend West Partners",
+            "business_address": "25679 23, South Bend, Indiana",
+            "country": "US",
+            "name_normalized": "hinson of south bend west partners",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "25679"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "25679"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S3-207721934",
+            "business_name": "Addi Chits Llp",
+            "business_address": "No 00696 Plot-37, 35 F/f New No-152 Bal Dhayan Road, Block-l, West Delhi, Delhi, West Delhi, DL",
+            "country": "India",
+            "name_normalized": "addi chits llp",
+            "house_numbers": [
+              "37"
+            ],
+            "house_number_candidates": [
+              "00696",
+              "37"
+            ],
+            "house_number_source": "explicit_premise_label",
+            "postal_codes": [],
+            "postal_candidates": [
+              "00696"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S3-36348173",
+            "business_name": "Gilddova Labs DBA Salas, Vincent and Jacob Inc",
+            "business_address": "TX, 11635 Three Chimneys Drive, Flint",
+            "country": "US",
+            "name_normalized": "gilddova labs dba salas vincent and jacob incorporated",
+            "house_numbers": [],
+            "house_number_candidates": [],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "11635"
+            ],
+            "postal_code_source": ""
+          }
+        ],
+        "name_null_like": [
+          {
+            "entity_id": "S3-502797644",
+            "business_name": "NA",
+            "business_address": "1 Bis R Capitaine Cohumel, Nantes",
+            "country": "France",
+            "name_normalized": "na",
+            "house_numbers": [
+              "1"
+            ],
+            "house_number_candidates": [
+              "1"
+            ],
+            "house_number_source": "leading_number_heuristic",
+            "postal_codes": [],
+            "postal_candidates": [],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S3-450574523",
+            "business_name": "NA",
+            "business_address": "Nº 72 Rue De Bailleul, Tourcoing, Hauts-de-France",
+            "country": "France",
+            "name_normalized": "na",
+            "house_numbers": [
+              "72"
+            ],
+            "house_number_candidates": [
+              "72"
+            ],
+            "house_number_source": "leading_number_heuristic",
+            "postal_codes": [],
+            "postal_candidates": [],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S3-718345525",
+            "business_name": "NA",
+            "business_address": "202, Meher House Cawasji Patel Street, Fort, Maharashtra",
+            "country": "India",
+            "name_normalized": "na",
+            "house_numbers": [
+              "202"
+            ],
+            "house_number_candidates": [
+              "202"
+            ],
+            "house_number_source": "leading_number_heuristic",
+            "postal_codes": [],
+            "postal_candidates": [],
+            "postal_code_source": ""
+          }
+        ]
+      },
+      "input_fingerprint": {
+        "sha256": "850942b11d2a4343486ed0834e28bce9f3b385f3fd497fd60ccf4ea3b8bda035",
+        "crc32": "18818d74",
+        "bytes": 506002772
+      },
+      "output_path": "C:\\Users\\alamu\\OneDrive\\Documents\\amazonml\\artifacts\\stage2\\test\\test_source3.tsv",
+      "output_bytes": 1465833762,
+      "validation": {
+        "rows": 5082316,
+        "raw_sha256": "cd5e76cb4945d8cb01e58a95d705638ef357ad6c28e1daf1893c4ed1849cab3e",
+        "exact_raw_roundtrip": true,
+        "all_flag_values_valid": true
+      },
+      "digit_preservation_checked_rows": 5082316,
+      "elapsed_seconds": 1888.2649999999994
+    },
+    "train_source3.tsv": {
+      "rows": 5285603,
+      "country_counts": {
+        "US": 3170056,
+        "India": 2115547
+      },
+      "flags": {
+        "name_missing": 0,
+        "address_missing": 175916,
+        "name_null_like": 18,
+        "address_null_like": 0,
+        "name_normalized_empty": 0,
+        "address_normalized_empty": 175916,
+        "house_number_missing": 1713410,
+        "house_number_ambiguous": 83737,
+        "postal_code_missing": 5285194,
+        "postal_code_ambiguous": 125295
+      },
+      "changes": {
+        "name_changed": 4965660,
+        "address_changed": 5109687,
+        "legal_suffix_changed_clean_view": 983104
+      },
+      "house_number_sources": {
+        "none": 1713410,
+        "leading_number_heuristic": 3136128,
+        "explicit_premise_label": 436065
+      },
+      "postal_code_sources": {
+        "none": 5285194,
+        "trailing_numeric_heuristic": 408,
+        "explicit_postal_label": 1
+      },
+      "per_country": {
+        "US": {
+          "rows": 3170056,
+          "name_missing": 0,
+          "address_missing": 110968,
+          "name_null_like": 11,
+          "address_null_like": 0,
+          "name_normalized_empty": 0,
+          "address_normalized_empty": 110968,
+          "house_number_missing": 778256,
+          "house_number_ambiguous": 63348,
+          "postal_code_missing": 3169911,
+          "postal_code_ambiguous": 116386
+        },
+        "India": {
+          "rows": 2115547,
+          "name_missing": 0,
+          "address_missing": 64948,
+          "name_null_like": 7,
+          "address_null_like": 0,
+          "name_normalized_empty": 0,
+          "address_normalized_empty": 64948,
+          "house_number_missing": 935154,
+          "house_number_ambiguous": 20389,
+          "postal_code_missing": 2115283,
+          "postal_code_ambiguous": 8909
+        }
+      },
+      "examples": {
+        "postal_code_ambiguous": [
+          {
+            "entity_id": "S3-738829801",
+            "business_name": "Best Software Innovations,",
+            "business_address": "Edwall, Washington, 29511 Tucker Prairie Rd",
+            "country": "US",
+            "name_normalized": "best software innovations",
+            "house_numbers": [],
+            "house_number_candidates": [],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "29511"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S3-911307067",
+            "business_name": "Umbraonyx dba Filson Apex Chemical",
+            "business_address": "Phoenix, AZ, 16007 45th Street",
+            "country": "US",
+            "name_normalized": "umbraonyx dba filson apex chemical",
+            "house_numbers": [],
+            "house_number_candidates": [],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "16007"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S3-303047307",
+            "business_name": "Akridge Family [Practice]",
+            "business_address": "Washington, Kent, 18223 286th Ct",
+            "country": "US",
+            "name_normalized": "akridge family practice",
+            "house_numbers": [],
+            "house_number_candidates": [],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "18223"
+            ],
+            "postal_code_source": ""
+          }
+        ],
+        "house_number_ambiguous": [
+          {
+            "entity_id": "S3-269888656",
+            "business_name": "Chiropractic Care Associates Limited",
+            "business_address": "02404 L, Brooklyn CITY, New York",
+            "country": "US",
+            "name_normalized": "chiropractic care associates limited",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "02404"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "02404"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S3-8222959",
+            "business_name": "Colonial Learning Center Partners",
+            "business_address": "20716 Chapman Rohd, Shewrood, Oregon",
+            "country": "US",
+            "name_normalized": "colonial learning center partners",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "20716"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "20716"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S3-783906913",
+            "business_name": "Mountain Prairie Beijing LLC",
+            "business_address": "001070 74, Ellenboro, North Carolina",
+            "country": "US",
+            "name_normalized": "mountain prairie beijing llc",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "001070"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "001070"
+            ],
+            "postal_code_source": ""
+          }
+        ],
+        "name_null_like": [
+          {
+            "entity_id": "S3-391601813",
+            "business_name": "NA",
+            "business_address": "209 3rd Street, KY, Hardinsburg",
+            "country": "US",
+            "name_normalized": "na",
+            "house_numbers": [
+              "209"
+            ],
+            "house_number_candidates": [
+              "209"
+            ],
+            "house_number_source": "leading_number_heuristic",
+            "postal_codes": [],
+            "postal_candidates": [],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S3-203011842",
+            "business_name": "Na",
+            "business_address": "Blue Ridge Pl, # Unit 215, Altoona, Iowa",
+            "country": "US",
+            "name_normalized": "na",
+            "house_numbers": [],
+            "house_number_candidates": [],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S3-42389827",
+            "business_name": "NA",
+            "business_address": "137 - R, Industrial Area B, Near Pahwa Hospital, Matharoo Street, Ludhiana, Punjab",
+            "country": "India",
+            "name_normalized": "na",
+            "house_numbers": [
+              "137"
+            ],
+            "house_number_candidates": [
+              "137"
+            ],
+            "house_number_source": "leading_number_heuristic",
+            "postal_codes": [],
+            "postal_candidates": [],
+            "postal_code_source": ""
+          }
+        ]
+      },
+      "input_fingerprint": {
+        "sha256": "67da22f5151898ff3006febd836c1a159e97ae95efa7257a5aff4fda685e58e9",
+        "crc32": "581539f4",
+        "bytes": 503705637
+      },
+      "output_path": "C:\\Users\\alamu\\OneDrive\\Documents\\amazonml\\artifacts\\stage2\\train\\train_source3.tsv",
+      "output_bytes": 1482344510,
+      "validation": {
+        "rows": 5285603,
+        "raw_sha256": "61d34af6289c7435c6009c56197736c6f783d43ea52fd394332f9e85c9f81625",
+        "exact_raw_roundtrip": true,
+        "all_flag_values_valid": true
+      },
+      "digit_preservation_checked_rows": 5285603,
+      "elapsed_seconds": 1932.186999999998
+    },
+    "test_source1.tsv": {
+      "rows": 1732544,
+      "country_counts": {
+        "US": 663106,
+        "France": 259452,
+        "India": 809986
+      },
+      "flags": {
+        "name_missing": 0,
+        "address_missing": 0,
+        "name_null_like": 0,
+        "address_null_like": 0,
+        "name_normalized_empty": 0,
+        "address_normalized_empty": 0,
+        "house_number_missing": 513818,
+        "house_number_ambiguous": 16716,
+        "postal_code_missing": 1732459,
+        "postal_code_ambiguous": 25614
+      },
+      "changes": {
+        "name_changed": 1732544,
+        "address_changed": 1732544,
+        "legal_suffix_changed_clean_view": 294718
+      },
+      "house_number_sources": {
+        "leading_number_heuristic": 1081865,
+        "none": 513818,
+        "explicit_premise_label": 136861
+      },
+      "postal_code_sources": {
+        "none": 1732459,
+        "trailing_numeric_heuristic": 83,
+        "explicit_postal_label": 2
+      },
+      "per_country": {
+        "US": {
+          "rows": 663106,
+          "name_missing": 0,
+          "address_missing": 0,
+          "name_null_like": 0,
+          "address_null_like": 0,
+          "name_normalized_empty": 0,
+          "address_normalized_empty": 0,
+          "house_number_missing": 105777,
+          "house_number_ambiguous": 13255,
+          "postal_code_missing": 663072,
+          "postal_code_ambiguous": 23732
+        },
+        "France": {
+          "rows": 259452,
+          "name_missing": 0,
+          "address_missing": 0,
+          "name_null_like": 0,
+          "address_null_like": 0,
+          "name_normalized_empty": 0,
+          "address_normalized_empty": 0,
+          "house_number_missing": 36418,
+          "house_number_ambiguous": 18,
+          "postal_code_missing": 259433,
+          "postal_code_ambiguous": 930
+        },
+        "India": {
+          "rows": 809986,
+          "name_missing": 0,
+          "address_missing": 0,
+          "name_null_like": 0,
+          "address_null_like": 0,
+          "name_normalized_empty": 0,
+          "address_normalized_empty": 0,
+          "house_number_missing": 371623,
+          "house_number_ambiguous": 3443,
+          "postal_code_missing": 809954,
+          "postal_code_ambiguous": 952
+        }
+      },
+      "examples": {
+        "house_number_ambiguous": [
+          {
+            "entity_id": "S1-429550703",
+            "business_name": "TMZ Creative Pharmaceutical",
+            "business_address": "22997 Bland Circle, West Linn, OR",
+            "country": "US",
+            "name_normalized": "tmz creative pharmaceutical",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "22997"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "22997"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S1-915512126",
+            "business_name": "Bright Digital Innovations Inc.",
+            "business_address": "29452 Fm 2978, Magnolia, TX",
+            "country": "US",
+            "name_normalized": "bright digital innovations incorporated",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "29452"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "29452"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S1-488174268",
+            "business_name": "Maid Yoga!",
+            "business_address": "11179 Avery Row, Fishers, IN",
+            "country": "US",
+            "name_normalized": "maid yoga",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "11179"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "11179"
+            ],
+            "postal_code_source": ""
+          }
+        ],
+        "postal_code_ambiguous": [
+          {
+            "entity_id": "S1-429550703",
+            "business_name": "TMZ Creative Pharmaceutical",
+            "business_address": "22997 Bland Circle, West Linn, OR",
+            "country": "US",
+            "name_normalized": "tmz creative pharmaceutical",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "22997"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "22997"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S1-915512126",
+            "business_name": "Bright Digital Innovations Inc.",
+            "business_address": "29452 Fm 2978, Magnolia, TX",
+            "country": "US",
+            "name_normalized": "bright digital innovations incorporated",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "29452"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "29452"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S1-488174268",
+            "business_name": "Maid Yoga!",
+            "business_address": "11179 Avery Row, Fishers, IN",
+            "country": "US",
+            "name_normalized": "maid yoga",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "11179"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "11179"
+            ],
+            "postal_code_source": ""
+          }
+        ]
+      },
+      "input_fingerprint": {
+        "sha256": "3d4a32c54c2ca9c53fd7c2be105bf26f708f94c4d2f88eb370972a195665c2f5",
+        "crc32": "e516809c",
+        "bytes": 175022086
+      },
+      "output_path": "C:\\Users\\alamu\\OneDrive\\Documents\\amazonml\\artifacts\\stage2\\test\\test_source1.tsv",
+      "output_bytes": 498689443,
+      "validation": {
+        "rows": 1732544,
+        "raw_sha256": "11a8db51ba667fccf11a1d75cab4ca4154e1da3637c7d6f4dea042a604a10543",
+        "exact_raw_roundtrip": true,
+        "all_flag_values_valid": true
+      },
+      "digit_preservation_checked_rows": 1732544,
+      "elapsed_seconds": 346.79699999999866
+    },
+    "train_source1.tsv": {
+      "rows": 2206821,
+      "country_counts": {
+        "US": 1323633,
+        "India": 883188
+      },
+      "flags": {
+        "name_missing": 0,
+        "address_missing": 0,
+        "name_null_like": 0,
+        "address_null_like": 0,
+        "name_normalized_empty": 0,
+        "address_normalized_empty": 0,
+        "house_number_missing": 615635,
+        "house_number_ambiguous": 30027,
+        "postal_code_missing": 2206705,
+        "postal_code_ambiguous": 48386
+      },
+      "changes": {
+        "name_changed": 2206821,
+        "address_changed": 2206821,
+        "legal_suffix_changed_clean_view": 447556
+      },
+      "house_number_sources": {
+        "leading_number_heuristic": 1440707,
+        "none": 615635,
+        "explicit_premise_label": 150479
+      },
+      "postal_code_sources": {
+        "none": 2206705,
+        "trailing_numeric_heuristic": 115,
+        "explicit_postal_label": 1
+      },
+      "per_country": {
+        "US": {
+          "rows": 1323633,
+          "name_missing": 0,
+          "address_missing": 0,
+          "name_null_like": 0,
+          "address_null_like": 0,
+          "name_normalized_empty": 0,
+          "address_normalized_empty": 0,
+          "house_number_missing": 211444,
+          "house_number_ambiguous": 26238,
+          "postal_code_missing": 1323551,
+          "postal_code_ambiguous": 47309
+        },
+        "India": {
+          "rows": 883188,
+          "name_missing": 0,
+          "address_missing": 0,
+          "name_null_like": 0,
+          "address_null_like": 0,
+          "name_normalized_empty": 0,
+          "address_normalized_empty": 0,
+          "house_number_missing": 404191,
+          "house_number_ambiguous": 3789,
+          "postal_code_missing": 883154,
+          "postal_code_ambiguous": 1077
+        }
+      },
+      "examples": {
+        "house_number_ambiguous": [
+          {
+            "entity_id": "S1-294547159",
+            "business_name": "DBC Agricultural LLC",
+            "business_address": "18646 Christanna Highway, Brunswick County, VA",
+            "country": "US",
+            "name_normalized": "dbc agricultural llc",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "18646"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "18646"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S1-304785953",
+            "business_name": "Lafferty Certified Lifesciences Inc.",
+            "business_address": "13315 Schwenger Place, Fairfax County, VA",
+            "country": "US",
+            "name_normalized": "lafferty certified lifesciences incorporated",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "13315"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "13315"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S1-787617931",
+            "business_name": "Delta Ministries IV",
+            "business_address": "40219 Bay Hill Way, Phoenix, AZ",
+            "country": "US",
+            "name_normalized": "delta ministries iv",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "40219"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "40219"
+            ],
+            "postal_code_source": ""
+          }
+        ],
+        "postal_code_ambiguous": [
+          {
+            "entity_id": "S1-294547159",
+            "business_name": "DBC Agricultural LLC",
+            "business_address": "18646 Christanna Highway, Brunswick County, VA",
+            "country": "US",
+            "name_normalized": "dbc agricultural llc",
+            "house_numbers": [],
+            "house_number_candidates": [
+              "18646"
+            ],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "18646"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S1-106221717",
+            "business_name": "Aditya Sun Consultants Private Limited",
+            "business_address": "Sy.No.1009, Flat No.60206, Iind Floor, Maple Block Indufortune Fields, 13 Phase, Kphb Colony, Kukatpally, Hyderabad, Telangana",
+            "country": "India",
+            "name_normalized": "aditya sun consultants private limited",
+            "house_numbers": [],
+            "house_number_candidates": [],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "60206"
+            ],
+            "postal_code_source": ""
+          },
+          {
+            "entity_id": "S1-46716098",
+            "business_name": "Knox and Nicholas, Inc",
+            "business_address": "WI, Town Of Townsend, 17160 Presbyterian Road",
+            "country": "US",
+            "name_normalized": "knox and nicholas incorporated",
+            "house_numbers": [],
+            "house_number_candidates": [],
+            "house_number_source": "",
+            "postal_codes": [],
+            "postal_candidates": [
+              "17160"
+            ],
+            "postal_code_source": ""
+          }
+        ]
+      },
+      "input_fingerprint": {
+        "sha256": "591af0e1dfeb65cab71ea6ee8cb69df00f92d6ba6fa79e05746c938775d14973",
+        "crc32": "ed0bb7c8",
+        "bytes": 210069713
+      },
+      "output_path": "C:\\Users\\alamu\\OneDrive\\Documents\\amazonml\\artifacts\\stage2\\train\\train_source1.tsv",
+      "output_bytes": 616435051,
+      "validation": {
+        "rows": 2206821,
+        "raw_sha256": "fcbf95b32a5f167c939f090412ffd79ca65de8bcb4e7e3b8e30edde844f5e7f7",
+        "exact_raw_roundtrip": true,
+        "all_flag_values_valid": true
+      },
+      "digit_preservation_checked_rows": 2206821,
+      "elapsed_seconds": 415.4689999999973
+    }
+  },
+  "elapsed_seconds": 2257.734000000004
+}

@@ -1,0 +1,36 @@
+{
+  "seed": 20260925,
+  "validation_fraction": 0.2,
+  "modes": {
+    "grouped": {
+      "type": "grouped"
+    },
+    "transfer_01": {
+      "type": "country_transfer",
+      "train_country": "India",
+      "validation_country": "US"
+    },
+    "transfer_02": {
+      "type": "country_transfer",
+      "train_country": "US",
+      "validation_country": "India"
+    }
+  },
+  "source_fingerprints": {
+    "train_source1.tsv": {
+      "sha256": "591af0e1dfeb65cab71ea6ee8cb69df00f92d6ba6fa79e05746c938775d14973",
+      "crc32": "ed0bb7c8",
+      "bytes": 210069713
+    },
+    "train_ground_truth.tsv": {
+      "sha256": "70bc1d8a16c667e0155c2105d0ab2ebe41d7e7a85d8a529e3ca81c6c3a5af037",
+      "crc32": "4ba4dc63",
+      "bytes": 127015583
+    }
+  },
+  "split_fingerprint": {
+    "sha256": "03e359beee08aa35e29c3cc67c83d1ee572a446881cac119ae27257836d1b9ad",
+    "crc32": "05dcd5ab",
+    "bytes": 95091515
+  }
+}

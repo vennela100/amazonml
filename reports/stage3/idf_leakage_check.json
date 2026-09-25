@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "idf_document_roles": {
+    "train": 1765458
+  },
+  "expected_training_entities": 1765458,
+  "validation_entities_in_idf": 0,
+  "elapsed_seconds": 2.547000000005937
+}

@@ -1,0 +1,236 @@
+{
+  "rows": 5034616,
+  "country_counts": {
+    "India": 2017799,
+    "US": 3016817
+  },
+  "flags": {
+    "name_missing": 0,
+    "address_missing": 168967,
+    "name_null_like": 6,
+    "address_null_like": 0,
+    "name_normalized_empty": 0,
+    "address_normalized_empty": 168967,
+    "house_number_missing": 1588128,
+    "house_number_ambiguous": 84813,
+    "postal_code_missing": 5034438,
+    "postal_code_ambiguous": 118399
+  },
+  "changes": {
+    "name_changed": 4541289,
+    "address_changed": 4865649,
+    "legal_suffix_changed_clean_view": 947372
+  },
+  "house_number_sources": {
+    "none": 1588128,
+    "leading_number_heuristic": 3000574,
+    "explicit_premise_label": 445914
+  },
+  "postal_code_sources": {
+    "none": 5034438,
+    "trailing_numeric_heuristic": 175,
+    "explicit_postal_label": 3
+  },
+  "per_country": {
+    "India": {
+      "rows": 2017799,
+      "name_missing": 0,
+      "address_missing": 57846,
+      "name_null_like": 0,
+      "address_null_like": 0,
+      "name_normalized_empty": 0,
+      "address_normalized_empty": 57846,
+      "house_number_missing": 834256,
+      "house_number_ambiguous": 23813,
+      "postal_code_missing": 2017695,
+      "postal_code_ambiguous": 8782
+    },
+    "US": {
+      "rows": 3016817,
+      "name_missing": 0,
+      "address_missing": 111121,
+      "name_null_like": 6,
+      "address_null_like": 0,
+      "name_normalized_empty": 0,
+      "address_normalized_empty": 111121,
+      "house_number_missing": 753872,
+      "house_number_ambiguous": 61000,
+      "postal_code_missing": 3016743,
+      "postal_code_ambiguous": 109617
+    }
+  },
+  "examples": {
+    "postal_code_ambiguous": [
+      {
+        "entity_id": "S2-982496654",
+        "business_name": "THE SPICEWOOD-HOMES",
+        "business_address": "22120 1/2 COYOTE CAVE TRL, null, SPICEWOOD, TX",
+        "country": "US",
+        "name_normalized": "the spicewood homes",
+        "house_numbers": [
+          "22120 1/2"
+        ],
+        "house_number_candidates": [
+          "22120 1/2"
+        ],
+        "house_number_source": "leading_number_heuristic",
+        "postal_codes": [],
+        "postal_candidates": [
+          "22120"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S2-879392749",
+        "business_name": "Direct Douglas Co",
+        "business_address": "11129 NATIONAL PIKE, GRANTVILLE, MD",
+        "country": "US",
+        "name_normalized": "direct douglas company",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "11129"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "11129"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S2-630651352",
+        "business_name": "Physical Therapy Care Inc.",
+        "business_address": "OH, 12313 REXFORD AVE, CLEVELAND",
+        "country": "US",
+        "name_normalized": "physical therapy care incorporated",
+        "house_numbers": [],
+        "house_number_candidates": [],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "12313"
+        ],
+        "postal_code_source": ""
+      }
+    ],
+    "house_number_ambiguous": [
+      {
+        "entity_id": "S2-735885703",
+        "business_name": "जैन वेंचर्स प्राइवेट लिमिटेड",
+        "business_address": "DOOR NO 149 SHOP F-1, FIRST FLOOR, PLOT NO. 4, SEC-12, PKT -5, MANISH METRO PLAZA-IV, D, WARKA, WEST DELHI, DELHI, दिल्ली",
+        "country": "India",
+        "name_normalized": "जैन वेंचर्स प्राइवेट लिमिटेड",
+        "house_numbers": [
+          "149",
+          "4"
+        ],
+        "house_number_candidates": [
+          "149",
+          "4"
+        ],
+        "house_number_source": "explicit_premise_label",
+        "postal_codes": [],
+        "postal_candidates": [],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S2-879392749",
+        "business_name": "Direct Douglas Co",
+        "business_address": "11129 NATIONAL PIKE, GRANTVILLE, MD",
+        "country": "US",
+        "name_normalized": "direct douglas company",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "11129"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "11129"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S2-430379962",
+        "business_name": "Summit  Initiative II Inc",
+        "business_address": "11641 BOX ELDER WAY, VANCE, AL",
+        "country": "US",
+        "name_normalized": "summit initiative ii incorporated",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "11641"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "11641"
+        ],
+        "postal_code_source": ""
+      }
+    ],
+    "name_null_like": [
+      {
+        "entity_id": "S2-876292278",
+        "business_name": "NAN",
+        "business_address": "1305 3610, SPANISH FORK, UT",
+        "country": "US",
+        "name_normalized": "nan",
+        "house_numbers": [
+          "1305"
+        ],
+        "house_number_candidates": [
+          "1305"
+        ],
+        "house_number_source": "leading_number_heuristic",
+        "postal_codes": [],
+        "postal_candidates": [],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S2-982925237",
+        "business_name": "NA",
+        "business_address": "11 OX YOKE CIRCLE, EAST HAMPTON, CT",
+        "country": "US",
+        "name_normalized": "na",
+        "house_numbers": [
+          "11"
+        ],
+        "house_number_candidates": [
+          "11"
+        ],
+        "house_number_source": "leading_number_heuristic",
+        "postal_codes": [],
+        "postal_candidates": [],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S2-776053769",
+        "business_name": "Na",
+        "business_address": "WEBB CITY, 114 MSIN ST, MO",
+        "country": "US",
+        "name_normalized": "na",
+        "house_numbers": [],
+        "house_number_candidates": [],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [],
+        "postal_code_source": ""
+      }
+    ]
+  },
+  "input_fingerprint": {
+    "sha256": "6336c1a055eec79cf8a6d99fdc8d32a2e4d9dc2662e00963cb35d66b89ed09ed",
+    "crc32": "8cf20498",
+    "bytes": 489301488
+  },
+  "output_path": "C:\\Users\\alamu\\OneDrive\\Documents\\amazonml\\artifacts\\stage2\\train\\train_source2.tsv",
+  "output_bytes": 1444170233,
+  "validation": {
+    "rows": 5034616,
+    "raw_sha256": "f6f674cb0731dbd7a9686d5a13a7b9faf057531cc6b042e557ebf0e025ef4905",
+    "exact_raw_roundtrip": true,
+    "all_flag_values_valid": true
+  },
+  "digit_preservation_checked_rows": 5034616,
+  "elapsed_seconds": 1845.9530000000013
+}

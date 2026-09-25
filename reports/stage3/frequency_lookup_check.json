@@ -1,0 +1,26 @@
+[
+  {
+    "kind": "gram",
+    "term": "str",
+    "field": "address",
+    "df": 422056,
+    "stored_seconds": 0.0011571999930310994,
+    "native_seconds": 0.03028190000622999
+  },
+  {
+    "kind": "gram",
+    "term": "ing",
+    "field": "address",
+    "df": 414597,
+    "stored_seconds": 0.0001959000073838979,
+    "native_seconds": 0.03372000000672415
+  },
+  {
+    "kind": "word",
+    "term": "cafe",
+    "field": "name",
+    "df": 5475,
+    "stored_seconds": 0.000345499996910803,
+    "native_seconds": 0.0015268999995896593
+  }
+]

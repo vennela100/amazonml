@@ -1,0 +1,379 @@
+{
+  "stage": 1,
+  "status": "PASS",
+  "seed": 20260925,
+  "validation_fraction": 0.2,
+  "modes": {
+    "grouped": {
+      "type": "grouped"
+    },
+    "transfer_01": {
+      "type": "country_transfer",
+      "train_country": "India",
+      "validation_country": "US"
+    },
+    "transfer_02": {
+      "type": "country_transfer",
+      "train_country": "US",
+      "validation_country": "India"
+    }
+  },
+  "source_fingerprints": {
+    "train_source1.tsv": {
+      "sha256": "591af0e1dfeb65cab71ea6ee8cb69df00f92d6ba6fa79e05746c938775d14973",
+      "crc32": "ed0bb7c8",
+      "bytes": 210069713
+    },
+    "train_ground_truth.tsv": {
+      "sha256": "70bc1d8a16c667e0155c2105d0ab2ebe41d7e7a85d8a529e3ca81c6c3a5af037",
+      "crc32": "4ba4dc63",
+      "bytes": 127015583
+    }
+  },
+  "split_fingerprint": {
+    "sha256": "03e359beee08aa35e29c3cc67c83d1ee572a446881cac119ae27257836d1b9ad",
+    "crc32": "05dcd5ab",
+    "bytes": 95091515
+  },
+  "baseline_metrics": {
+    "all": {
+      "entities": 2206821,
+      "macro_f05": 0.05584820880352326,
+      "true_singletons": 123247,
+      "singleton_fraction": 0.05584820880352326,
+      "false_singleton_count": 0,
+      "false_singleton_rate": 0.0,
+      "missed_non_singleton_rate": 1.0,
+      "nonempty_predictions": 0,
+      "exact_set_accuracy": 0.05584820880352326
+    },
+    "perfect_oracle": {
+      "entities": 2206821,
+      "macro_f05": 1.0,
+      "true_singletons": 123247,
+      "singleton_fraction": 0.05584820880352326,
+      "false_singleton_count": 0,
+      "false_singleton_rate": 0.0,
+      "missed_non_singleton_rate": 0.0,
+      "nonempty_predictions": 2083574,
+      "exact_set_accuracy": 1.0
+    },
+    "grouped/train": {
+      "entities": 1765458,
+      "macro_f05": 0.05584839741302257,
+      "true_singletons": 98598,
+      "singleton_fraction": 0.05584839741302257,
+      "false_singleton_count": 0,
+      "false_singleton_rate": 0.0,
+      "missed_non_singleton_rate": 1.0,
+      "nonempty_predictions": 0,
+      "exact_set_accuracy": 0.05584839741302257
+    },
+    "transfer_01/validation": {
+      "entities": 1323633,
+      "macro_f05": 0.055828163849042746,
+      "true_singletons": 73896,
+      "singleton_fraction": 0.055828163849042746,
+      "false_singleton_count": 0,
+      "false_singleton_rate": 0.0,
+      "missed_non_singleton_rate": 1.0,
+      "nonempty_predictions": 0,
+      "exact_set_accuracy": 0.055828163849042746
+    },
+    "transfer_02/train": {
+      "entities": 1323633,
+      "macro_f05": 0.055828163849042746,
+      "true_singletons": 73896,
+      "singleton_fraction": 0.055828163849042746,
+      "false_singleton_count": 0,
+      "false_singleton_rate": 0.0,
+      "missed_non_singleton_rate": 1.0,
+      "nonempty_predictions": 0,
+      "exact_set_accuracy": 0.055828163849042746
+    },
+    "transfer_01/train": {
+      "entities": 883188,
+      "macro_f05": 0.05587825015738439,
+      "true_singletons": 49351,
+      "singleton_fraction": 0.05587825015738439,
+      "false_singleton_count": 0,
+      "false_singleton_rate": 0.0,
+      "missed_non_singleton_rate": 1.0,
+      "nonempty_predictions": 0,
+      "exact_set_accuracy": 0.05587825015738439
+    },
+    "transfer_02/validation": {
+      "entities": 883188,
+      "macro_f05": 0.05587825015738439,
+      "true_singletons": 49351,
+      "singleton_fraction": 0.05587825015738439,
+      "false_singleton_count": 0,
+      "false_singleton_rate": 0.0,
+      "missed_non_singleton_rate": 1.0,
+      "nonempty_predictions": 0,
+      "exact_set_accuracy": 0.05587825015738439
+    },
+    "grouped/validation": {
+      "entities": 441363,
+      "macro_f05": 0.055847454362962005,
+      "true_singletons": 24649,
+      "singleton_fraction": 0.055847454362962005,
+      "false_singleton_count": 0,
+      "false_singleton_rate": 0.0,
+      "missed_non_singleton_rate": 1.0,
+      "nonempty_predictions": 0,
+      "exact_set_accuracy": 0.055847454362962005
+    }
+  },
+  "per_country_baselines": {
+    "grouped/train": {
+      "US": {
+        "entities": 1058907,
+        "macro_f05": 0.055828321089576326,
+        "true_singletons": 59117,
+        "singleton_fraction": 0.055828321089576326,
+        "false_singleton_count": 0,
+        "false_singleton_rate": 0.0,
+        "missed_non_singleton_rate": 1.0,
+        "nonempty_predictions": 0,
+        "exact_set_accuracy": 0.055828321089576326
+      },
+      "India": {
+        "entities": 706551,
+        "macro_f05": 0.055878485771020066,
+        "true_singletons": 39481,
+        "singleton_fraction": 0.055878485771020066,
+        "false_singleton_count": 0,
+        "false_singleton_rate": 0.0,
+        "missed_non_singleton_rate": 1.0,
+        "nonempty_predictions": 0,
+        "exact_set_accuracy": 0.055878485771020066
+      }
+    },
+    "transfer_01/validation": {
+      "US": {
+        "entities": 1323633,
+        "macro_f05": 0.055828163849042746,
+        "true_singletons": 73896,
+        "singleton_fraction": 0.055828163849042746,
+        "false_singleton_count": 0,
+        "false_singleton_rate": 0.0,
+        "missed_non_singleton_rate": 1.0,
+        "nonempty_predictions": 0,
+        "exact_set_accuracy": 0.055828163849042746
+      }
+    },
+    "transfer_02/train": {
+      "US": {
+        "entities": 1323633,
+        "macro_f05": 0.055828163849042746,
+        "true_singletons": 73896,
+        "singleton_fraction": 0.055828163849042746,
+        "false_singleton_count": 0,
+        "false_singleton_rate": 0.0,
+        "missed_non_singleton_rate": 1.0,
+        "nonempty_predictions": 0,
+        "exact_set_accuracy": 0.055828163849042746
+      }
+    },
+    "transfer_01/train": {
+      "India": {
+        "entities": 883188,
+        "macro_f05": 0.05587825015738439,
+        "true_singletons": 49351,
+        "singleton_fraction": 0.05587825015738439,
+        "false_singleton_count": 0,
+        "false_singleton_rate": 0.0,
+        "missed_non_singleton_rate": 1.0,
+        "nonempty_predictions": 0,
+        "exact_set_accuracy": 0.05587825015738439
+      }
+    },
+    "transfer_02/validation": {
+      "India": {
+        "entities": 883188,
+        "macro_f05": 0.05587825015738439,
+        "true_singletons": 49351,
+        "singleton_fraction": 0.05587825015738439,
+        "false_singleton_count": 0,
+        "false_singleton_rate": 0.0,
+        "missed_non_singleton_rate": 1.0,
+        "nonempty_predictions": 0,
+        "exact_set_accuracy": 0.05587825015738439
+      }
+    },
+    "grouped/validation": {
+      "India": {
+        "entities": 176637,
+        "macro_f05": 0.055877307698839994,
+        "true_singletons": 9870,
+        "singleton_fraction": 0.055877307698839994,
+        "false_singleton_count": 0,
+        "false_singleton_rate": 0.0,
+        "missed_non_singleton_rate": 1.0,
+        "nonempty_predictions": 0,
+        "exact_set_accuracy": 0.055877307698839994
+      },
+      "US": {
+        "entities": 264726,
+        "macro_f05": 0.055827534885126505,
+        "true_singletons": 14779,
+        "singleton_fraction": 0.055827534885126505,
+        "false_singleton_count": 0,
+        "false_singleton_rate": 0.0,
+        "missed_non_singleton_rate": 1.0,
+        "nonempty_predictions": 0,
+        "exact_set_accuracy": 0.055827534885126505
+      }
+    }
+  },
+  "strata": [
+    {
+      "country": "India",
+      "match_count": 0,
+      "entities": 49351,
+      "validation_entities": 9870
+    },
+    {
+      "country": "India",
+      "match_count": 1,
+      "entities": 47468,
+      "validation_entities": 9494
+    },
+    {
+      "country": "India",
+      "match_count": 2,
+      "entities": 149927,
+      "validation_entities": 29985
+    },
+    {
+      "country": "India",
+      "match_count": 3,
+      "entities": 211965,
+      "validation_entities": 42393
+    },
+    {
+      "country": "India",
+      "match_count": 4,
+      "entities": 193669,
+      "validation_entities": 38734
+    },
+    {
+      "country": "India",
+      "match_count": 5,
+      "entities": 129339,
+      "validation_entities": 25868
+    },
+    {
+      "country": "India",
+      "match_count": 6,
+      "entities": 66462,
+      "validation_entities": 13292
+    },
+    {
+      "country": "India",
+      "match_count": 7,
+      "entities": 25669,
+      "validation_entities": 5134
+    },
+    {
+      "country": "India",
+      "match_count": 8,
+      "entities": 7463,
+      "validation_entities": 1493
+    },
+    {
+      "country": "India",
+      "match_count": 9,
+      "entities": 1671,
+      "validation_entities": 334
+    },
+    {
+      "country": "India",
+      "match_count": 10,
+      "entities": 187,
+      "validation_entities": 37
+    },
+    {
+      "country": "India",
+      "match_count": 11,
+      "entities": 17,
+      "validation_entities": 3
+    },
+    {
+      "country": "US",
+      "match_count": 0,
+      "entities": 73896,
+      "validation_entities": 14779
+    },
+    {
+      "country": "US",
+      "match_count": 1,
+      "entities": 71689,
+      "validation_entities": 14338
+    },
+    {
+      "country": "US",
+      "match_count": 2,
+      "entities": 225285,
+      "validation_entities": 45057
+    },
+    {
+      "country": "US",
+      "match_count": 3,
+      "entities": 318876,
+      "validation_entities": 63775
+    },
+    {
+      "country": "US",
+      "match_count": 4,
+      "entities": 290446,
+      "validation_entities": 58089
+    },
+    {
+      "country": "US",
+      "match_count": 5,
+      "entities": 192618,
+      "validation_entities": 38524
+    },
+    {
+      "country": "US",
+      "match_count": 6,
+      "entities": 98406,
+      "validation_entities": 19681
+    },
+    {
+      "country": "US",
+      "match_count": 7,
+      "entities": 38299,
+      "validation_entities": 7660
+    },
+    {
+      "country": "US",
+      "match_count": 8,
+      "entities": 11217,
+      "validation_entities": 2243
+    },
+    {
+      "country": "US",
+      "match_count": 9,
+      "entities": 2534,
+      "validation_entities": 507
+    },
+    {
+      "country": "US",
+      "match_count": 10,
+      "entities": 347,
+      "validation_entities": 69
+    },
+    {
+      "country": "US",
+      "match_count": 11,
+      "entities": 20,
+      "validation_entities": 4
+    }
+  ],
+  "s1_train_validation_overlap": 0,
+  "shared_positive_targets": 0,
+  "elapsed_seconds": 522.875
+}

@@ -1,0 +1,41 @@
+{
+  "mode": "grouped",
+  "role": "validation",
+  "baseline": null,
+  "metrics": {
+    "entities": 441363,
+    "macro_f05": 0.055847454362962005,
+    "true_singletons": 24649,
+    "singleton_fraction": 0.055847454362962005,
+    "false_singleton_count": 0,
+    "false_singleton_rate": 0.0,
+    "missed_non_singleton_rate": 1.0,
+    "nonempty_predictions": 0,
+    "exact_set_accuracy": 0.055847454362962005
+  },
+  "per_country": {
+    "India": {
+      "entities": 176637,
+      "macro_f05": 0.055877307698839994,
+      "true_singletons": 9870,
+      "singleton_fraction": 0.055877307698839994,
+      "false_singleton_count": 0,
+      "false_singleton_rate": 0.0,
+      "missed_non_singleton_rate": 1.0,
+      "nonempty_predictions": 0,
+      "exact_set_accuracy": 0.055877307698839994
+    },
+    "US": {
+      "entities": 264726,
+      "macro_f05": 0.055827534885126505,
+      "true_singletons": 14779,
+      "singleton_fraction": 0.055827534885126505,
+      "false_singleton_count": 0,
+      "false_singleton_rate": 0.0,
+      "missed_non_singleton_rate": 1.0,
+      "nonempty_predictions": 0,
+      "exact_set_accuracy": 0.055827534885126505
+    }
+  },
+  "check": "PASS: actual validation TSV in reverse ID order; exact coverage and metric agreement"
+}

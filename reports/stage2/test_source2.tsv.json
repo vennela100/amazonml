@@ -1,0 +1,244 @@
+{
+  "rows": 4887273,
+  "country_counts": {
+    "India": 2312565,
+    "France": 703378,
+    "US": 1871330
+  },
+  "flags": {
+    "name_missing": 0,
+    "address_missing": 129408,
+    "name_null_like": 49,
+    "address_null_like": 0,
+    "name_normalized_empty": 0,
+    "address_normalized_empty": 129408,
+    "house_number_missing": 1522239,
+    "house_number_ambiguous": 67360,
+    "postal_code_missing": 4887088,
+    "postal_code_ambiguous": 81781
+  },
+  "changes": {
+    "name_changed": 4327268,
+    "address_changed": 4757865,
+    "legal_suffix_changed_clean_view": 823043
+  },
+  "house_number_sources": {
+    "none": 1522239,
+    "leading_number_heuristic": 2842770,
+    "explicit_premise_label": 522264
+  },
+  "postal_code_sources": {
+    "none": 4887088,
+    "trailing_numeric_heuristic": 177,
+    "explicit_postal_label": 8
+  },
+  "per_country": {
+    "India": {
+      "rows": 2312565,
+      "name_missing": 0,
+      "address_missing": 52764,
+      "name_null_like": 0,
+      "address_null_like": 0,
+      "name_normalized_empty": 0,
+      "address_normalized_empty": 52764,
+      "house_number_missing": 912888,
+      "house_number_ambiguous": 27956,
+      "postal_code_missing": 2312464,
+      "postal_code_ambiguous": 9851
+    },
+    "France": {
+      "rows": 703378,
+      "name_missing": 0,
+      "address_missing": 21537,
+      "name_null_like": 45,
+      "address_null_like": 0,
+      "name_normalized_empty": 0,
+      "address_normalized_empty": 21537,
+      "house_number_missing": 174171,
+      "house_number_ambiguous": 738,
+      "postal_code_missing": 703340,
+      "postal_code_ambiguous": 2583
+    },
+    "US": {
+      "rows": 1871330,
+      "name_missing": 0,
+      "address_missing": 55107,
+      "name_null_like": 4,
+      "address_null_like": 0,
+      "name_normalized_empty": 0,
+      "address_normalized_empty": 55107,
+      "house_number_missing": 435180,
+      "house_number_ambiguous": 38666,
+      "postal_code_missing": 1871284,
+      "postal_code_ambiguous": 69347
+    }
+  },
+  "examples": {
+    "postal_code_ambiguous": [
+      {
+        "entity_id": "S2-910351373",
+        "business_name": "PVT. INDUSTRIES PMB LEASING LIMITED",
+        "business_address": "SURAT, OFFICE NO. 03038, TRADE HOUSE, NEAR RUSHABH PETROL PUMP, RING ROAD, Gujarat, SURAT",
+        "country": "India",
+        "name_normalized": "pvt industries pmb leasing limited",
+        "house_numbers": [],
+        "house_number_candidates": [],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "03038"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S2-560710588",
+        "business_name": "Schmidt Third Inc",
+        "business_address": "KENNT, WA, 26443 161TH PL",
+        "country": "US",
+        "name_normalized": "schmidt third incorporated",
+        "house_numbers": [],
+        "house_number_candidates": [],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "26443"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S2-750187901",
+        "business_name": "FOUNDRY HARBOR CO",
+        "business_address": "14489 SAINT PLACE, MORRISON CDP, CO",
+        "country": "US",
+        "name_normalized": "foundry harbor company",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "14489"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "14489"
+        ],
+        "postal_code_source": ""
+      }
+    ],
+    "house_number_ambiguous": [
+      {
+        "entity_id": "S2-750187901",
+        "business_name": "FOUNDRY HARBOR CO",
+        "business_address": "14489 SAINT PLACE, MORRISON CDP, CO",
+        "country": "US",
+        "name_normalized": "foundry harbor company",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "14489"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "14489"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S2-641777383",
+        "business_name": "Inc Holy Ministries",
+        "business_address": "41056 VILLAGE 41, CITY OF CAMARILLO, CA",
+        "country": "US",
+        "name_normalized": "inc holy ministries",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "41056"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "41056"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S2-747996032",
+        "business_name": "Thrasher Metr0politan Beverage",
+        "business_address": "15380  TNT PLACE, FAYETTEVILLE, AR",
+        "country": "US",
+        "name_normalized": "thrasher metr0politan beverage",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "15380"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "15380"
+        ],
+        "postal_code_source": ""
+      }
+    ],
+    "name_null_like": [
+      {
+        "entity_id": "S2-368256770",
+        "business_name": "NA",
+        "business_address": "7 ALLÉE DES SAUGES GRAND PIQUEY, Lège-Cap-Ferret, Gironde",
+        "country": "France",
+        "name_normalized": "na",
+        "house_numbers": [
+          "7"
+        ],
+        "house_number_candidates": [
+          "7"
+        ],
+        "house_number_source": "leading_number_heuristic",
+        "postal_codes": [],
+        "postal_candidates": [],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S2-940145557",
+        "business_name": "NA",
+        "business_address": "# 9 R. DE SAVENAY, Nantes, Pays de la Loire",
+        "country": "France",
+        "name_normalized": "na",
+        "house_numbers": [
+          "9"
+        ],
+        "house_number_candidates": [
+          "9"
+        ],
+        "house_number_source": "leading_number_heuristic",
+        "postal_codes": [],
+        "postal_candidates": [],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S2-16141727",
+        "business_name": "NA",
+        "business_address": "RUE DU FOUR A CHAUX, Lille",
+        "country": "France",
+        "name_normalized": "na",
+        "house_numbers": [],
+        "house_number_candidates": [],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [],
+        "postal_code_source": ""
+      }
+    ]
+  },
+  "input_fingerprint": {
+    "sha256": "79d906c7497af2ace70aa277f6e334a652094909de99bd6c57b53420b6a7b2dd",
+    "crc32": "6d4ab3a9",
+    "bytes": 509456422
+  },
+  "output_path": "C:\\Users\\alamu\\OneDrive\\Documents\\amazonml\\artifacts\\stage2\\test\\test_source2.tsv",
+  "output_bytes": 1472643608,
+  "validation": {
+    "rows": 4887273,
+    "raw_sha256": "4e6186d77877e4ea8cbf43223671fac173b752907dc994c1c05c4daf62b542e9",
+    "exact_raw_roundtrip": true,
+    "all_flag_values_valid": true
+  },
+  "digit_preservation_checked_rows": 4887273,
+  "elapsed_seconds": 1840.936999999998
+}

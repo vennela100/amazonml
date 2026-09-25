@@ -1,0 +1,181 @@
+{
+  "rows": 2206821,
+  "country_counts": {
+    "US": 1323633,
+    "India": 883188
+  },
+  "flags": {
+    "name_missing": 0,
+    "address_missing": 0,
+    "name_null_like": 0,
+    "address_null_like": 0,
+    "name_normalized_empty": 0,
+    "address_normalized_empty": 0,
+    "house_number_missing": 615635,
+    "house_number_ambiguous": 30027,
+    "postal_code_missing": 2206705,
+    "postal_code_ambiguous": 48386
+  },
+  "changes": {
+    "name_changed": 2206821,
+    "address_changed": 2206821,
+    "legal_suffix_changed_clean_view": 447556
+  },
+  "house_number_sources": {
+    "leading_number_heuristic": 1440707,
+    "none": 615635,
+    "explicit_premise_label": 150479
+  },
+  "postal_code_sources": {
+    "none": 2206705,
+    "trailing_numeric_heuristic": 115,
+    "explicit_postal_label": 1
+  },
+  "per_country": {
+    "US": {
+      "rows": 1323633,
+      "name_missing": 0,
+      "address_missing": 0,
+      "name_null_like": 0,
+      "address_null_like": 0,
+      "name_normalized_empty": 0,
+      "address_normalized_empty": 0,
+      "house_number_missing": 211444,
+      "house_number_ambiguous": 26238,
+      "postal_code_missing": 1323551,
+      "postal_code_ambiguous": 47309
+    },
+    "India": {
+      "rows": 883188,
+      "name_missing": 0,
+      "address_missing": 0,
+      "name_null_like": 0,
+      "address_null_like": 0,
+      "name_normalized_empty": 0,
+      "address_normalized_empty": 0,
+      "house_number_missing": 404191,
+      "house_number_ambiguous": 3789,
+      "postal_code_missing": 883154,
+      "postal_code_ambiguous": 1077
+    }
+  },
+  "examples": {
+    "house_number_ambiguous": [
+      {
+        "entity_id": "S1-294547159",
+        "business_name": "DBC Agricultural LLC",
+        "business_address": "18646 Christanna Highway, Brunswick County, VA",
+        "country": "US",
+        "name_normalized": "dbc agricultural llc",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "18646"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "18646"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S1-304785953",
+        "business_name": "Lafferty Certified Lifesciences Inc.",
+        "business_address": "13315 Schwenger Place, Fairfax County, VA",
+        "country": "US",
+        "name_normalized": "lafferty certified lifesciences incorporated",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "13315"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "13315"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S1-787617931",
+        "business_name": "Delta Ministries IV",
+        "business_address": "40219 Bay Hill Way, Phoenix, AZ",
+        "country": "US",
+        "name_normalized": "delta ministries iv",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "40219"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "40219"
+        ],
+        "postal_code_source": ""
+      }
+    ],
+    "postal_code_ambiguous": [
+      {
+        "entity_id": "S1-294547159",
+        "business_name": "DBC Agricultural LLC",
+        "business_address": "18646 Christanna Highway, Brunswick County, VA",
+        "country": "US",
+        "name_normalized": "dbc agricultural llc",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "18646"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "18646"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S1-106221717",
+        "business_name": "Aditya Sun Consultants Private Limited",
+        "business_address": "Sy.No.1009, Flat No.60206, Iind Floor, Maple Block Indufortune Fields, 13 Phase, Kphb Colony, Kukatpally, Hyderabad, Telangana",
+        "country": "India",
+        "name_normalized": "aditya sun consultants private limited",
+        "house_numbers": [],
+        "house_number_candidates": [],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "60206"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S1-46716098",
+        "business_name": "Knox and Nicholas, Inc",
+        "business_address": "WI, Town Of Townsend, 17160 Presbyterian Road",
+        "country": "US",
+        "name_normalized": "knox and nicholas incorporated",
+        "house_numbers": [],
+        "house_number_candidates": [],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "17160"
+        ],
+        "postal_code_source": ""
+      }
+    ]
+  },
+  "input_fingerprint": {
+    "sha256": "591af0e1dfeb65cab71ea6ee8cb69df00f92d6ba6fa79e05746c938775d14973",
+    "crc32": "ed0bb7c8",
+    "bytes": 210069713
+  },
+  "output_path": "C:\\Users\\alamu\\OneDrive\\Documents\\amazonml\\artifacts\\stage2\\train\\train_source1.tsv",
+  "output_bytes": 616435051,
+  "validation": {
+    "rows": 2206821,
+    "raw_sha256": "fcbf95b32a5f167c939f090412ffd79ca65de8bcb4e7e3b8e30edde844f5e7f7",
+    "exact_raw_roundtrip": true,
+    "all_flag_values_valid": true
+  },
+  "digit_preservation_checked_rows": 2206821,
+  "elapsed_seconds": 415.4689999999973
+}

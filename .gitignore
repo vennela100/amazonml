@@ -1,0 +1,28 @@
+# ── Data & large artifacts — never commit ───────────────────────────────
+# Competition dataset (do not redistribute) and all generated large artifacts.
+student_resource/
+artifacts/
+scratch/
+.tmp_pdf_tools/
+
+# ── Large / binary generated outputs ────────────────────────────────────
+*.sqlite
+*.sqlite-*
+*.lock
+*.npz
+*.cbm
+*.pkl
+*.tsv
+*.log
+catboost_info/
+
+# ── Python ──────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ── OS / editor ─────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

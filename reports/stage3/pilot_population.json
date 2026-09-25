@@ -1,0 +1,10 @@
+{
+  "entities": 1000,
+  "countries": {
+    "US": 575,
+    "India": 425
+  },
+  "singletons": 49,
+  "true_pairs": 3473,
+  "all_empty_macro_f05": 0.049
+}

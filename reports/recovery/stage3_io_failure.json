@@ -1,0 +1,24 @@
+{
+  "stage": 3,
+  "status": "RECOVERING_INDEXES",
+  "updated_utc": "2026-09-25T14:38:05.364892+00:00",
+  "completed_prior_stages": [
+    0,
+    1,
+    2
+  ],
+  "tests": {
+    "total": 48,
+    "passed": true,
+    "stage3": 11
+  },
+  "saved_index_rows": {
+    "S1": 2206821,
+    "S2": 2360000,
+    "S3": 2430000
+  },
+  "failure": "All three original index writers exited on sqlite3.OperationalError: disk I/O error; disk was not full. Root cause unconfirmed.",
+  "recovery": "Read checkpoints successfully; integrity checks and one-writer-at-a-time resumption underway.",
+  "recall_validation_complete": false,
+  "stages_4_to_8_started": false
+}

@@ -1,0 +1,199 @@
+{
+  "rows": 1732544,
+  "country_counts": {
+    "US": 663106,
+    "France": 259452,
+    "India": 809986
+  },
+  "flags": {
+    "name_missing": 0,
+    "address_missing": 0,
+    "name_null_like": 0,
+    "address_null_like": 0,
+    "name_normalized_empty": 0,
+    "address_normalized_empty": 0,
+    "house_number_missing": 513818,
+    "house_number_ambiguous": 16716,
+    "postal_code_missing": 1732459,
+    "postal_code_ambiguous": 25614
+  },
+  "changes": {
+    "name_changed": 1732544,
+    "address_changed": 1732544,
+    "legal_suffix_changed_clean_view": 294718
+  },
+  "house_number_sources": {
+    "leading_number_heuristic": 1081865,
+    "none": 513818,
+    "explicit_premise_label": 136861
+  },
+  "postal_code_sources": {
+    "none": 1732459,
+    "trailing_numeric_heuristic": 83,
+    "explicit_postal_label": 2
+  },
+  "per_country": {
+    "US": {
+      "rows": 663106,
+      "name_missing": 0,
+      "address_missing": 0,
+      "name_null_like": 0,
+      "address_null_like": 0,
+      "name_normalized_empty": 0,
+      "address_normalized_empty": 0,
+      "house_number_missing": 105777,
+      "house_number_ambiguous": 13255,
+      "postal_code_missing": 663072,
+      "postal_code_ambiguous": 23732
+    },
+    "France": {
+      "rows": 259452,
+      "name_missing": 0,
+      "address_missing": 0,
+      "name_null_like": 0,
+      "address_null_like": 0,
+      "name_normalized_empty": 0,
+      "address_normalized_empty": 0,
+      "house_number_missing": 36418,
+      "house_number_ambiguous": 18,
+      "postal_code_missing": 259433,
+      "postal_code_ambiguous": 930
+    },
+    "India": {
+      "rows": 809986,
+      "name_missing": 0,
+      "address_missing": 0,
+      "name_null_like": 0,
+      "address_null_like": 0,
+      "name_normalized_empty": 0,
+      "address_normalized_empty": 0,
+      "house_number_missing": 371623,
+      "house_number_ambiguous": 3443,
+      "postal_code_missing": 809954,
+      "postal_code_ambiguous": 952
+    }
+  },
+  "examples": {
+    "house_number_ambiguous": [
+      {
+        "entity_id": "S1-429550703",
+        "business_name": "TMZ Creative Pharmaceutical",
+        "business_address": "22997 Bland Circle, West Linn, OR",
+        "country": "US",
+        "name_normalized": "tmz creative pharmaceutical",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "22997"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "22997"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S1-915512126",
+        "business_name": "Bright Digital Innovations Inc.",
+        "business_address": "29452 Fm 2978, Magnolia, TX",
+        "country": "US",
+        "name_normalized": "bright digital innovations incorporated",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "29452"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "29452"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S1-488174268",
+        "business_name": "Maid Yoga!",
+        "business_address": "11179 Avery Row, Fishers, IN",
+        "country": "US",
+        "name_normalized": "maid yoga",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "11179"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "11179"
+        ],
+        "postal_code_source": ""
+      }
+    ],
+    "postal_code_ambiguous": [
+      {
+        "entity_id": "S1-429550703",
+        "business_name": "TMZ Creative Pharmaceutical",
+        "business_address": "22997 Bland Circle, West Linn, OR",
+        "country": "US",
+        "name_normalized": "tmz creative pharmaceutical",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "22997"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "22997"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S1-915512126",
+        "business_name": "Bright Digital Innovations Inc.",
+        "business_address": "29452 Fm 2978, Magnolia, TX",
+        "country": "US",
+        "name_normalized": "bright digital innovations incorporated",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "29452"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "29452"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S1-488174268",
+        "business_name": "Maid Yoga!",
+        "business_address": "11179 Avery Row, Fishers, IN",
+        "country": "US",
+        "name_normalized": "maid yoga",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "11179"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "11179"
+        ],
+        "postal_code_source": ""
+      }
+    ]
+  },
+  "input_fingerprint": {
+    "sha256": "3d4a32c54c2ca9c53fd7c2be105bf26f708f94c4d2f88eb370972a195665c2f5",
+    "crc32": "e516809c",
+    "bytes": 175022086
+  },
+  "output_path": "C:\\Users\\alamu\\OneDrive\\Documents\\amazonml\\artifacts\\stage2\\test\\test_source1.tsv",
+  "output_bytes": 498689443,
+  "validation": {
+    "rows": 1732544,
+    "raw_sha256": "11a8db51ba667fccf11a1d75cab4ca4154e1da3637c7d6f4dea042a604a10543",
+    "exact_raw_roundtrip": true,
+    "all_flag_values_valid": true
+  },
+  "digit_preservation_checked_rows": 1732544,
+  "elapsed_seconds": 346.79699999999866
+}

@@ -1,0 +1,257 @@
+{
+  "rows": 5082316,
+  "country_counts": {
+    "India": 2405000,
+    "France": 731615,
+    "US": 1945701
+  },
+  "flags": {
+    "name_missing": 0,
+    "address_missing": 136098,
+    "name_null_like": 61,
+    "address_null_like": 0,
+    "name_normalized_empty": 0,
+    "address_normalized_empty": 136098,
+    "house_number_missing": 1642937,
+    "house_number_ambiguous": 64231,
+    "postal_code_missing": 5081913,
+    "postal_code_ambiguous": 86230
+  },
+  "changes": {
+    "name_changed": 4726735,
+    "address_changed": 4946217,
+    "legal_suffix_changed_clean_view": 857236
+  },
+  "house_number_sources": {
+    "leading_number_heuristic": 2932918,
+    "explicit_premise_label": 506461,
+    "none": 1642937
+  },
+  "postal_code_sources": {
+    "none": 5081913,
+    "trailing_numeric_heuristic": 397,
+    "explicit_postal_label": 6
+  },
+  "per_country": {
+    "India": {
+      "rows": 2405000,
+      "name_missing": 0,
+      "address_missing": 59240,
+      "name_null_like": 11,
+      "address_null_like": 0,
+      "name_normalized_empty": 0,
+      "address_normalized_empty": 59240,
+      "house_number_missing": 1017453,
+      "house_number_ambiguous": 23401,
+      "postal_code_missing": 2404712,
+      "postal_code_ambiguous": 9806
+    },
+    "France": {
+      "rows": 731615,
+      "name_missing": 0,
+      "address_missing": 21541,
+      "name_null_like": 48,
+      "address_null_like": 0,
+      "name_normalized_empty": 0,
+      "address_normalized_empty": 21541,
+      "house_number_missing": 178347,
+      "house_number_ambiguous": 732,
+      "postal_code_missing": 731579,
+      "postal_code_ambiguous": 2780
+    },
+    "US": {
+      "rows": 1945701,
+      "name_missing": 0,
+      "address_missing": 55317,
+      "name_null_like": 2,
+      "address_null_like": 0,
+      "name_normalized_empty": 0,
+      "address_normalized_empty": 55317,
+      "house_number_missing": 447137,
+      "house_number_ambiguous": 40098,
+      "postal_code_missing": 1945622,
+      "postal_code_ambiguous": 73644
+    }
+  },
+  "examples": {
+    "house_number_ambiguous": [
+      {
+        "entity_id": "S3-125349995",
+        "business_name": "Ss First Infotech LLP",
+        "business_address": "H No 1-62/K/49, Plot No 36, Floor 3 K2, Business Park, Rd Number 10, Kakatiya Hills, Guttala, Begumpet, Shaikpet, Hyderabad, TG",
+        "country": "India",
+        "name_normalized": "ss first infotech llp",
+        "house_numbers": [
+          "1-62",
+          "36"
+        ],
+        "house_number_candidates": [
+          "1-62",
+          "36"
+        ],
+        "house_number_source": "explicit_premise_label",
+        "postal_codes": [],
+        "postal_candidates": [],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S3-191842349",
+        "business_name": "Big Exports Public Limited",
+        "business_address": "Plot 21., Door 6A Ags Colony, 1St Main Road, Velachery, Chennai, தமிழ்நாடு",
+        "country": "India",
+        "name_normalized": "big exports public limited",
+        "house_numbers": [
+          "21",
+          "6a"
+        ],
+        "house_number_candidates": [
+          "21",
+          "6a"
+        ],
+        "house_number_source": "explicit_premise_label",
+        "postal_codes": [],
+        "postal_candidates": [],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S3-528485292",
+        "business_name": "Hinson of South Bend West Partners",
+        "business_address": "25679 23, South Bend, Indiana",
+        "country": "US",
+        "name_normalized": "hinson of south bend west partners",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "25679"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "25679"
+        ],
+        "postal_code_source": ""
+      }
+    ],
+    "postal_code_ambiguous": [
+      {
+        "entity_id": "S3-528485292",
+        "business_name": "Hinson of South Bend West Partners",
+        "business_address": "25679 23, South Bend, Indiana",
+        "country": "US",
+        "name_normalized": "hinson of south bend west partners",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "25679"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "25679"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S3-207721934",
+        "business_name": "Addi Chits Llp",
+        "business_address": "No 00696 Plot-37, 35 F/f New No-152 Bal Dhayan Road, Block-l, West Delhi, Delhi, West Delhi, DL",
+        "country": "India",
+        "name_normalized": "addi chits llp",
+        "house_numbers": [
+          "37"
+        ],
+        "house_number_candidates": [
+          "00696",
+          "37"
+        ],
+        "house_number_source": "explicit_premise_label",
+        "postal_codes": [],
+        "postal_candidates": [
+          "00696"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S3-36348173",
+        "business_name": "Gilddova Labs DBA Salas, Vincent and Jacob Inc",
+        "business_address": "TX, 11635 Three Chimneys Drive, Flint",
+        "country": "US",
+        "name_normalized": "gilddova labs dba salas vincent and jacob incorporated",
+        "house_numbers": [],
+        "house_number_candidates": [],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "11635"
+        ],
+        "postal_code_source": ""
+      }
+    ],
+    "name_null_like": [
+      {
+        "entity_id": "S3-502797644",
+        "business_name": "NA",
+        "business_address": "1 Bis R Capitaine Cohumel, Nantes",
+        "country": "France",
+        "name_normalized": "na",
+        "house_numbers": [
+          "1"
+        ],
+        "house_number_candidates": [
+          "1"
+        ],
+        "house_number_source": "leading_number_heuristic",
+        "postal_codes": [],
+        "postal_candidates": [],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S3-450574523",
+        "business_name": "NA",
+        "business_address": "Nº 72 Rue De Bailleul, Tourcoing, Hauts-de-France",
+        "country": "France",
+        "name_normalized": "na",
+        "house_numbers": [
+          "72"
+        ],
+        "house_number_candidates": [
+          "72"
+        ],
+        "house_number_source": "leading_number_heuristic",
+        "postal_codes": [],
+        "postal_candidates": [],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S3-718345525",
+        "business_name": "NA",
+        "business_address": "202, Meher House Cawasji Patel Street, Fort, Maharashtra",
+        "country": "India",
+        "name_normalized": "na",
+        "house_numbers": [
+          "202"
+        ],
+        "house_number_candidates": [
+          "202"
+        ],
+        "house_number_source": "leading_number_heuristic",
+        "postal_codes": [],
+        "postal_candidates": [],
+        "postal_code_source": ""
+      }
+    ]
+  },
+  "input_fingerprint": {
+    "sha256": "850942b11d2a4343486ed0834e28bce9f3b385f3fd497fd60ccf4ea3b8bda035",
+    "crc32": "18818d74",
+    "bytes": 506002772
+  },
+  "output_path": "C:\\Users\\alamu\\OneDrive\\Documents\\amazonml\\artifacts\\stage2\\test\\test_source3.tsv",
+  "output_bytes": 1465833762,
+  "validation": {
+    "rows": 5082316,
+    "raw_sha256": "cd5e76cb4945d8cb01e58a95d705638ef357ad6c28e1daf1893c4ed1849cab3e",
+    "exact_raw_roundtrip": true,
+    "all_flag_values_valid": true
+  },
+  "digit_preservation_checked_rows": 5082316,
+  "elapsed_seconds": 1888.2649999999994
+}

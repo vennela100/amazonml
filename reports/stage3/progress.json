@@ -1,0 +1,38 @@
+{
+  "stage": 3,
+  "status": "RETRIEVING_VALIDATION_PILOT",
+  "updated_utc": "2026-09-25T14:38:05.364892+00:00",
+  "completed_prior_stages": [
+    0,
+    1,
+    2
+  ],
+  "tests": {
+    "total": 48,
+    "passed": true,
+    "stage3": 11
+  },
+  "saved_index_rows": {
+    "S1": 2206821,
+    "S2": 5034616,
+    "S3": 5285603
+  },
+  "failure": "All three original index writers exited on sqlite3.OperationalError: disk I/O error; disk was not full. Root cause unconfirmed.",
+  "recovery": "Read checkpoints successfully; integrity checks and one-writer-at-a-time resumption underway.",
+  "recall_validation_complete": false,
+  "stages_4_to_8_started": false,
+  "index_integrity": {
+    "S2": "PRAGMA quick_check: ok",
+    "S3": "PRAGMA quick_check: ok",
+    "S1": "PRAGMA quick_check: ok"
+  },
+  "completed_indexes": [
+    "S1",
+    "S2",
+    "S3"
+  ],
+  "active_source": null,
+  "next": "Finish S3, fit training-only IDF, evaluate fixed 1000 validation S1s against full S2/S3 pools with route budgets 50, compare smaller budgets.",
+  "idf_training_entities": 1765458,
+  "pilot_entities": 1000
+}

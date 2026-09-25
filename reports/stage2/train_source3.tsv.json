@@ -1,0 +1,228 @@
+{
+  "rows": 5285603,
+  "country_counts": {
+    "US": 3170056,
+    "India": 2115547
+  },
+  "flags": {
+    "name_missing": 0,
+    "address_missing": 175916,
+    "name_null_like": 18,
+    "address_null_like": 0,
+    "name_normalized_empty": 0,
+    "address_normalized_empty": 175916,
+    "house_number_missing": 1713410,
+    "house_number_ambiguous": 83737,
+    "postal_code_missing": 5285194,
+    "postal_code_ambiguous": 125295
+  },
+  "changes": {
+    "name_changed": 4965660,
+    "address_changed": 5109687,
+    "legal_suffix_changed_clean_view": 983104
+  },
+  "house_number_sources": {
+    "none": 1713410,
+    "leading_number_heuristic": 3136128,
+    "explicit_premise_label": 436065
+  },
+  "postal_code_sources": {
+    "none": 5285194,
+    "trailing_numeric_heuristic": 408,
+    "explicit_postal_label": 1
+  },
+  "per_country": {
+    "US": {
+      "rows": 3170056,
+      "name_missing": 0,
+      "address_missing": 110968,
+      "name_null_like": 11,
+      "address_null_like": 0,
+      "name_normalized_empty": 0,
+      "address_normalized_empty": 110968,
+      "house_number_missing": 778256,
+      "house_number_ambiguous": 63348,
+      "postal_code_missing": 3169911,
+      "postal_code_ambiguous": 116386
+    },
+    "India": {
+      "rows": 2115547,
+      "name_missing": 0,
+      "address_missing": 64948,
+      "name_null_like": 7,
+      "address_null_like": 0,
+      "name_normalized_empty": 0,
+      "address_normalized_empty": 64948,
+      "house_number_missing": 935154,
+      "house_number_ambiguous": 20389,
+      "postal_code_missing": 2115283,
+      "postal_code_ambiguous": 8909
+    }
+  },
+  "examples": {
+    "postal_code_ambiguous": [
+      {
+        "entity_id": "S3-738829801",
+        "business_name": "Best Software Innovations,",
+        "business_address": "Edwall, Washington, 29511 Tucker Prairie Rd",
+        "country": "US",
+        "name_normalized": "best software innovations",
+        "house_numbers": [],
+        "house_number_candidates": [],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "29511"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S3-911307067",
+        "business_name": "Umbraonyx dba Filson Apex Chemical",
+        "business_address": "Phoenix, AZ, 16007 45th Street",
+        "country": "US",
+        "name_normalized": "umbraonyx dba filson apex chemical",
+        "house_numbers": [],
+        "house_number_candidates": [],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "16007"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S3-303047307",
+        "business_name": "Akridge Family [Practice]",
+        "business_address": "Washington, Kent, 18223 286th Ct",
+        "country": "US",
+        "name_normalized": "akridge family practice",
+        "house_numbers": [],
+        "house_number_candidates": [],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "18223"
+        ],
+        "postal_code_source": ""
+      }
+    ],
+    "house_number_ambiguous": [
+      {
+        "entity_id": "S3-269888656",
+        "business_name": "Chiropractic Care Associates Limited",
+        "business_address": "02404 L, Brooklyn CITY, New York",
+        "country": "US",
+        "name_normalized": "chiropractic care associates limited",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "02404"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "02404"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S3-8222959",
+        "business_name": "Colonial Learning Center Partners",
+        "business_address": "20716 Chapman Rohd, Shewrood, Oregon",
+        "country": "US",
+        "name_normalized": "colonial learning center partners",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "20716"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "20716"
+        ],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S3-783906913",
+        "business_name": "Mountain Prairie Beijing LLC",
+        "business_address": "001070 74, Ellenboro, North Carolina",
+        "country": "US",
+        "name_normalized": "mountain prairie beijing llc",
+        "house_numbers": [],
+        "house_number_candidates": [
+          "001070"
+        ],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [
+          "001070"
+        ],
+        "postal_code_source": ""
+      }
+    ],
+    "name_null_like": [
+      {
+        "entity_id": "S3-391601813",
+        "business_name": "NA",
+        "business_address": "209 3rd Street, KY, Hardinsburg",
+        "country": "US",
+        "name_normalized": "na",
+        "house_numbers": [
+          "209"
+        ],
+        "house_number_candidates": [
+          "209"
+        ],
+        "house_number_source": "leading_number_heuristic",
+        "postal_codes": [],
+        "postal_candidates": [],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S3-203011842",
+        "business_name": "Na",
+        "business_address": "Blue Ridge Pl, # Unit 215, Altoona, Iowa",
+        "country": "US",
+        "name_normalized": "na",
+        "house_numbers": [],
+        "house_number_candidates": [],
+        "house_number_source": "",
+        "postal_codes": [],
+        "postal_candidates": [],
+        "postal_code_source": ""
+      },
+      {
+        "entity_id": "S3-42389827",
+        "business_name": "NA",
+        "business_address": "137 - R, Industrial Area B, Near Pahwa Hospital, Matharoo Street, Ludhiana, Punjab",
+        "country": "India",
+        "name_normalized": "na",
+        "house_numbers": [
+          "137"
+        ],
+        "house_number_candidates": [
+          "137"
+        ],
+        "house_number_source": "leading_number_heuristic",
+        "postal_codes": [],
+        "postal_candidates": [],
+        "postal_code_source": ""
+      }
+    ]
+  },
+  "input_fingerprint": {
+    "sha256": "67da22f5151898ff3006febd836c1a159e97ae95efa7257a5aff4fda685e58e9",
+    "crc32": "581539f4",
+    "bytes": 503705637
+  },
+  "output_path": "C:\\Users\\alamu\\OneDrive\\Documents\\amazonml\\artifacts\\stage2\\train\\train_source3.tsv",
+  "output_bytes": 1482344510,
+  "validation": {
+    "rows": 5285603,
+    "raw_sha256": "61d34af6289c7435c6009c56197736c6f783d43ea52fd394332f9e85c9f81625",
+    "exact_raw_roundtrip": true,
+    "all_flag_values_valid": true
+  },
+  "digit_preservation_checked_rows": 5285603,
+  "elapsed_seconds": 1932.186999999998
+}

@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "scope": "pilot",
+  "population_entities": 1765458,
+  "pool_rows": {
+    "2": 5034616,
+    "3": 5285603
+  },
+  "groups": {
+    "overall": {
+      "entities": 25000,
+      "non_singletons": 23571,
+      "singletons": 1429,
+      "true_matches": 86764,
+      "found_matches": 77622,
+      "candidates": 7529859,
+      "fully_recalled": 17383,
+      "zero_recalled": 438,
+      "macro_candidate_recall_non_singletons": 0.8934928767911984,
+      "oracle_macro_f05_ceiling": 0.9554998047093255,
+      "all_empty_macro_f05": 0.05716,
+      "micro_candidate_recall": 0.8946337190539855,
+      "mean_candidates": 301.19436,
+      "reduction_ratio": 0.9999708151193303
+    },
+    "country:India": {
+      "entities": 9811,
+      "non_singletons": 9290,
+      "singletons": 521,
+      "true_matches": 33446,
+      "found_matches": 28704,
+      "candidates": 2743148,
+      "fully_recalled": 6317,
+      "zero_recalled": 272,
+      "macro_candidate_recall_non_singletons": 0.8566064380542379,
+      "oracle_macro_f05_ceiling": 0.9357322625152087,
+      "all_empty_macro_f05": 0.05310365915808786,
+      "micro_candidate_recall": 0.858219219039646,
+      "mean_candidates": 279.5992253592906,
+      "reduction_ratio": 0.9999729076267316
+    },
+    "country:US": {
+      "entities": 15189,
+      "non_singletons": 14281,
+      "singletons": 908,
+      "true_matches": 53318,
+      "found_matches": 48918,
+      "candidates": 4786711,
+      "fully_recalled": 11066,
+      "zero_recalled": 166,
+      "macro_candidate_recall_non_singletons": 0.9174880463077997,
+      "oracle_macro_f05_ceiling": 0.9682682131935045,
+      "all_empty_macro_f05": 0.05978010402264797,
+      "micro_candidate_recall": 0.9174762744288983,
+      "mean_candidates": 315.1432615708737,
+      "reduction_ratio": 0.9999694635102636
+    }
+  },
+  "retrieval_seconds": {
+    "2": 2028.3910000000033,
+    "3": 1932.1559999999881
+  },
+  "route_macro_recall": {
+    "name": 0.1870378099314078,
+    "address": 0.4280271395200759,
+    "combined": 0.8040194134536605,
+    "rare": 0.5482457425151792,
+    "components": 0.3277587875335105
+  },
+  "notes": [
+    "Singleton recall is undefined and excluded from macro candidate recall.",
+    "Oracle F0.5 assumes perfect classification of candidates; it is not model performance.",
+    "Approximate inverted-index shortlists reranked with train-fitted TF-IDF cosine.",
+    "candidate_pairs.tsv is a training retrieval artifact, not a test submission."
+  ]
+}

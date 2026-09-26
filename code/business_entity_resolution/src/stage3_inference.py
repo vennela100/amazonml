@@ -35,12 +35,14 @@ def expected_rows(stage2_report_dir, source):
     return json.loads(report.read_text(encoding='utf-8'))['rows']
 
 
-def prepare_test_queries(db, source1_index, limit=0, countries=None):
+def prepare_test_queries(db, source1_index, limit=0, countries=None,
+                         shard_count=1, shard_index=0):
     """Populate the query table from the test source1 index (no splits/roles).
 
     ``limit`` caps the number of queries (0 = all). ``countries`` optionally
     restricts to a set of country labels (e.g. {'France'}); country stays an
-    open string label — nothing is hard-coded to a fixed set.
+    open string label — nothing is hard-coded to a fixed set. ``shard_count``/
+    ``shard_index`` select a disjoint rid-modulo slice for parallel retrieval.
     """
     db.executescript('''
         CREATE TABLE IF NOT EXISTS state(key TEXT PRIMARY KEY,value TEXT NOT NULL);
@@ -53,11 +55,16 @@ def prepare_test_queries(db, source1_index, limit=0, countries=None):
     ''')
     if get_state(db, 'queries_ready', False):
         return
-    where, params = '', []
+    clauses, params = [], []
     if countries:
-        placeholders = ','.join('?' * len(countries))
-        where = f' WHERE country IN ({placeholders})'
-        params = list(countries)
+        clauses.append(f'country IN ({",".join("?" * len(countries))})')
+        params += list(countries)
+    if shard_count > 1:
+        # Disjoint slices by rid so N parallel processes cover the population
+        # exactly once between them, each writing its own candidates DB.
+        clauses.append('rid % ? = ?')
+        params += [shard_count, shard_index]
+    where = (' WHERE ' + ' AND '.join(clauses)) if clauses else ''
     sql = ('SELECT entity_id,country,name,address,houses,postals FROM records'
            + where + ' ORDER BY rid' + (' LIMIT ?' if limit else ''))
     if limit:
@@ -82,15 +89,23 @@ def run(args):
     out_dir.mkdir(parents=True, exist_ok=True)
 
     indexes = {i: index_dir / f'test_source{i}.sqlite' for i in (1, 2, 3)}
-    for source in (1, 2, 3):
-        path = norm / f'test_source{source}.tsv'
-        build_index(path, indexes[source], expected_rows(args.stage2_report_dir, source))
-        if source in (2, 3):
-            prepare_statistics(indexes[source])
-    if args.index_only:
-        log('Index-only: test indexes built; stopping before retrieval.')
-        print('STAGE 3 TEST INDEXES READY')
-        return
+    # Shards must not open indexes in write mode concurrently (SQLite lock / the
+    # earlier crash). When sharding, indexes must already be built (--index-only
+    # first); each shard then only reads them.
+    if args.shard_count > 1:
+        for i in (1, 2, 3):
+            if not indexes[i].exists():
+                raise SystemExit(f'{indexes[i]} missing — run --index-only first')
+    else:
+        for source in (1, 2, 3):
+            path = norm / f'test_source{source}.tsv'
+            build_index(path, indexes[source], expected_rows(args.stage2_report_dir, source))
+            if source in (2, 3):
+                prepare_statistics(indexes[source])
+        if args.index_only:
+            log('Index-only: test indexes built; stopping before retrieval.')
+            print('STAGE 3 TEST INDEXES READY')
+            return
 
     idf = load_idf(args.idf)
     config = {'anchors': args.anchors, 'postings_per_anchor': args.postings_per_anchor,
@@ -100,7 +115,8 @@ def run(args):
 
     with closing(connect(out_dir / 'candidates.sqlite')) as db:
         prepare_test_queries(db, indexes[1], args.limit,
-                             set(args.countries) if args.countries else None)
+                             set(args.countries) if args.countries else None,
+                             args.shard_count, args.shard_index)
         (out_dir / 'config.json').write_text(
             json.dumps({'retrieval': config, 'mode': 'test', 'idf': str(args.idf),
                         'limit': args.limit, 'countries': args.countries}, indent=2),
@@ -124,6 +140,10 @@ def main():
     p.add_argument('--limit', type=int, default=0, help='Cap queries (0 = all)')
     p.add_argument('--index-only', action='store_true',
                    help='Build test indexes then stop (prerequisite step)')
+    p.add_argument('--shard-count', type=int, default=1,
+                   help='Total number of parallel shards (rid-modulo split)')
+    p.add_argument('--shard-index', type=int, default=0,
+                   help='This shard number, 0..shard_count-1')
     p.add_argument('--countries', nargs='*', default=None,
                    help='Restrict to country labels, e.g. --countries France')
     for name, default in [('anchors', 8), ('postings-per-anchor', 96),

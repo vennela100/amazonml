@@ -23,6 +23,11 @@ from pathlib import Path
 
 import scoring
 
+# The two output files use different second-column names per the challenge spec
+# and validate_submission.py (matching -> matched_entity_ids, candidates ->
+# candidate_entity_ids). The S1 column name is shared.
+CANDIDATE_HEADER = ['source1_entity_id', 'candidate_entity_ids']
+
 
 def predicted_sets_from_pairs(s1_ids, cand_ids, proba, threshold):
     """Build ``{s1_id: set(cand_id)}`` for pairs scoring at or above threshold.
@@ -103,7 +108,7 @@ def write_candidate_pairs(population_ids, candidate_map, out_path):
     ``matching_results.tsv`` must be a per-entity subset of this file.
     """
     with Path(out_path).open('w', encoding='utf-8', newline='') as handle:
-        handle.write('\t'.join(scoring.MATCH_HEADER) + '\n')
+        handle.write('\t'.join(CANDIDATE_HEADER) + '\n')
         for s1_id in population_ids:
             ids = candidate_map.get(s1_id, set())
             handle.write(f'{s1_id}\t{",".join(sorted(ids))}\n')

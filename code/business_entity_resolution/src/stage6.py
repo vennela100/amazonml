@@ -114,8 +114,8 @@ def run(args):
     evaluation.write_candidate_pairs(population, candidate_map, cand_path)
 
     # Re-read both through the strict parser to guarantee they are well formed.
-    _validate_written(match_path, population)
-    _validate_written(cand_path, population)
+    _validate_written(match_path, scoring.MATCH_HEADER, population)
+    _validate_written(cand_path, evaluation.CANDIDATE_HEADER, population)
 
     # Score only when ground truth is present (training/validation, not test).
     metrics = {'threshold': threshold,
@@ -148,9 +148,9 @@ def run(args):
     print(f'  {cand_path}')
 
 
-def _validate_written(path, population):
+def _validate_written(path, header, population):
     """Strict re-read: header, one row per population S1, valid id lists."""
-    rows = list(scoring.read_tsv(path, scoring.MATCH_HEADER))
+    rows = list(scoring.read_tsv(path, header))
     ids = [r[0] for r in rows]
     if ids != list(population):
         raise ValueError(f'{path}: rows must equal the population exactly, once each')

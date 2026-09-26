@@ -76,8 +76,9 @@ def test_submission_round_trips_through_scorer(tmp_path):
     assert parsed['S1-1'] == {'S2-1', 'S3-2'}
     assert parsed['S1-2'] == set()
     assert parsed['S1-3'] == set()
-    # candidate_pairs.tsv is valid under the same strict parser.
-    list(scoring.read_tsv(cand_path, scoring.MATCH_HEADER))
+    # candidate_pairs.tsv uses its own header (candidate_entity_ids).
+    crows = list(scoring.read_tsv(cand_path, evaluation.CANDIDATE_HEADER))
+    assert [r[0] for r in crows] == population
 
 
 def test_check_subset_rejects_prediction_outside_candidates():

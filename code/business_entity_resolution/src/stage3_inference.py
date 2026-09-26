@@ -87,6 +87,10 @@ def run(args):
         build_index(path, indexes[source], expected_rows(args.stage2_report_dir, source))
         if source in (2, 3):
             prepare_statistics(indexes[source])
+    if args.index_only:
+        log('Index-only: test indexes built; stopping before retrieval.')
+        print('STAGE 3 TEST INDEXES READY')
+        return
 
     idf = load_idf(args.idf)
     config = {'anchors': args.anchors, 'postings_per_anchor': args.postings_per_anchor,
@@ -118,6 +122,8 @@ def main():
     p.add_argument('--idf', default='artifacts/stage3/indexes/idf_grouped.sqlite',
                    help='Reuse the TRAIN-fitted IDF for feature-scale consistency')
     p.add_argument('--limit', type=int, default=0, help='Cap queries (0 = all)')
+    p.add_argument('--index-only', action='store_true',
+                   help='Build test indexes then stop (prerequisite step)')
     p.add_argument('--countries', nargs='*', default=None,
                    help='Restrict to country labels, e.g. --countries France')
     for name, default in [('anchors', 8), ('postings-per-anchor', 96),

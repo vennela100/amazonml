@@ -1,5 +1,0 @@
-{
-  "threshold": 0.85,
-  "threshold_source": "held-out validation population",
-  "scale": "raw_model_probability"
-}

@@ -1,0 +1,20 @@
+{
+  "retrieval": {
+    "anchors": 5,
+    "postings_per_anchor": 16,
+    "shortlist": 12,
+    "rare_max_df": 100,
+    "component_max_df": 5000,
+    "budgets": {
+      "name": 20,
+      "address": 20,
+      "combined": 20,
+      "rare": 20,
+      "components": 20
+    }
+  },
+  "mode": "test",
+  "idf": "C:\\Users\\alamu\\OneDrive\\Documents\\amazonml\\artifacts\\stage3\\indexes\\idf_grouped.sqlite",
+  "limit": 0,
+  "countries": null
+}
